@@ -1,11 +1,8 @@
 package eu.senla.alexbych.bulletinboard.backend.prototype;
 
 import eu.senla.alexbych.bulletinboard.backend.dto.UserDTO;
-import eu.senla.alexbych.bulletinboard.backend.model.Post;
-import eu.senla.alexbych.bulletinboard.backend.model.Role;
 import eu.senla.alexbych.bulletinboard.backend.model.User;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class UserPrototype {

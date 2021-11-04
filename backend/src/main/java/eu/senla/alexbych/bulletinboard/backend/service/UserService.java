@@ -1,5 +1,7 @@
 package eu.senla.alexbych.bulletinboard.backend.service;
 
+import eu.senla.alexbych.bulletinboard.backend.controller.request.ProfileEditRequest;
+import eu.senla.alexbych.bulletinboard.backend.controller.request.RegistrationRequest;
 import eu.senla.alexbych.bulletinboard.backend.dto.PostDTO;
 import eu.senla.alexbych.bulletinboard.backend.dto.UserDTO;
 import eu.senla.alexbych.bulletinboard.backend.model.Rating;
@@ -10,10 +12,7 @@ import eu.senla.alexbych.bulletinboard.backend.repository.RoleRepository;
 import eu.senla.alexbych.bulletinboard.backend.repository.UserRepository;
 import eu.senla.alexbych.bulletinboard.backend.utils.converter.IPostConverter;
 import eu.senla.alexbych.bulletinboard.backend.utils.converter.IUserConverter;
-import eu.senla.alexbych.bulletinboard.backend.utils.converter.PostConverter;
-import eu.senla.alexbych.bulletinboard.backend.utils.converter.UserConverter;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -29,9 +28,9 @@ public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
 
-    private final PostConverter postConverter;
+    private final IPostConverter postConverter;
 
-    private final UserConverter userConverter;
+    private final IUserConverter userConverter;
 
     private final RatingRepository ratingRepository;
 
@@ -39,11 +38,27 @@ public class UserService implements UserDetailsService {
 
     private final PasswordEncoder passwordEncoder;
 
-    public User saveUser(User user) {
+    public void editProfile(UserDTO user, ProfileEditRequest profile){
+        if(!profile.getFirstname().isEmpty())
+            user.setFirstname(profile.getFirstname());
+        if(!profile.getLastname().isEmpty())
+            user.setLastname(profile.getLastname());
+        if(!profile.getPhoneNumber().isEmpty())
+            user.setPhoneNumber(profile.getPhoneNumber());
+        userRepository.save(userConverter.convertUserDTOToUser(user));
+    }
+
+    public boolean saveUser(RegistrationRequest request) {
+        UserDTO user = new UserDTO();
+        user.setFirstname(request.getFirstname());
+        user.setLastname(request.getLastname());
+        user.setPhoneNumber(request.getPhoneNumber());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
+        user.setLogin(request.getLogin());
         Role userRole = roleRepository.findByName("ROLE_USER");
         user.setRole(userRole);
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        return userRepository.save(user);
+        userRepository.save(userConverter.convertUserDTOToUser(user));
+        return true;
     }
 
 
@@ -62,23 +77,21 @@ public class UserService implements UserDetailsService {
 
     public User findByLoginAndPassword(String login, String password) {
         User user = findByLogin(login);
-        if (user != null) {
-            if (passwordEncoder.matches(password, user.getPassword())) {
+        if (user != null && passwordEncoder.matches(password, user.getPassword())) {
                 return user;
-            }
         }
         return null;
     }
 
-    public User update(String login) {
+    public boolean update(String login) {
         User user = userRepository.findByLogin(login);
         if (user != null) {
             Role role = new Role();
             role.setId(1);
             user.setRole(role);
             userRepository.save(user);
-            return user;
-        } else return null;
+            return true;
+        } else return false;
     }
 
     @Override

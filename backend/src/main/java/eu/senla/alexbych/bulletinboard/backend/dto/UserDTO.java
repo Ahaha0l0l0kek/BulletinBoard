@@ -3,7 +3,6 @@ package eu.senla.alexbych.bulletinboard.backend.dto;
 import eu.senla.alexbych.bulletinboard.backend.model.Post;
 import eu.senla.alexbych.bulletinboard.backend.model.Role;
 import eu.senla.alexbych.bulletinboard.backend.model.Rating;
-import eu.senla.alexbych.bulletinboard.chat.model.Message;
 import lombok.*;
 
 import java.util.Set;

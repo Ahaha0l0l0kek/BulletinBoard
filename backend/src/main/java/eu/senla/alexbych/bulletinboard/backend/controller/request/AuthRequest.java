@@ -9,7 +9,4 @@ public class AuthRequest {
     private String login;
     @NonNull
     private String password;
-    private String firstname;
-    private String lastname;
-    private String phoneNumber;
 }

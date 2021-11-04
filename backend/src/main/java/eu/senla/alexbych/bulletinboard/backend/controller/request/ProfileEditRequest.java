@@ -4,7 +4,7 @@ import lombok.Data;
 
 
 @Data
-public class ProfileRequest {
+public class ProfileEditRequest {
     private String firstname;
     private String lastname;
     private String phoneNumber;

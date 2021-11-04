@@ -1,22 +1,19 @@
 package eu.senla.alexbych.bulletinboard.backend.controller;
 
-import eu.senla.alexbych.bulletinboard.backend.controller.request.CreateMessageRequest;
+import eu.senla.alexbych.bulletinboard.backend.controller.request.CreateCommentRequest;
 import eu.senla.alexbych.bulletinboard.backend.controller.request.CreatePostRequest;
 import eu.senla.alexbych.bulletinboard.backend.controller.request.PostEditRequest;
 import eu.senla.alexbych.bulletinboard.backend.dto.CommentDTO;
 import eu.senla.alexbych.bulletinboard.backend.dto.PostDTO;
-import eu.senla.alexbych.bulletinboard.backend.model.User;
+import eu.senla.alexbych.bulletinboard.backend.dto.UserDTO;
 import eu.senla.alexbych.bulletinboard.backend.service.PostService;
 import eu.senla.alexbych.bulletinboard.chat.dto.ChatDTO;
-import eu.senla.alexbych.bulletinboard.chat.dto.ChatUserDTO;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
-import java.util.List;
 
 @RestController
 @AllArgsConstructor
@@ -26,21 +23,11 @@ public class PostController {
     private final PostService postService;
 
     @PatchMapping("/{id}/edit")
-    public ResponseEntity<String> editPost(@PathVariable long id, @RequestBody PostEditRequest request) {
-        User user = (User) SecurityContextHolder.getContext().getAuthentication();
-        PostDTO post = postService.getPostById(id);
-        if(post.getUser().getId() == user.getId()) {
-            if (request.getTitle() != null)
-                post.setTitle(request.getTitle());
-            if (request.getPicture() != null)
-                post.setPicture(request.getPicture());
-            if (request.getDescription() != null)
-                post.setDescription(request.getDescription());
-            if (request.getPrice() != -1) {
-                post.setPrice(request.getPrice());
-            } else post.setPrice(post.getPrice());
-            return ResponseEntity.ok().build();
-        } else return ResponseEntity.status(HttpStatus.FORBIDDEN).body("not authorized to this post");
+    public ResponseEntity<String> editPost(@AuthenticationPrincipal UserDTO user, @PathVariable long id,
+                                           @RequestBody PostEditRequest request) {
+        if(postService.editPost(user, id, request))
+            return ResponseEntity.ok().build() ;
+        else return ResponseEntity.status(HttpStatus.FORBIDDEN).body("not authorized to this post");
     }
 
     @PatchMapping("/boost/{id}")
@@ -50,27 +37,15 @@ public class PostController {
     }
 
     @GetMapping("/category/{category}")
-    public ResponseEntity<Object> findByCategory(@PathVariable String category) {
-        List<PostDTO> posts = postService.getPostsByCategory(category);
-        return new ResponseEntity<>(posts, HttpStatus.OK);
+    public ResponseEntity<Object> findByCategory(@PathVariable String category, @RequestParam String order) {
+        if(order.isEmpty()) return new ResponseEntity<>(postService.getPostsByCategory(category), HttpStatus.OK);
+        else return new ResponseEntity<>(postService.findPostsByCategoryWithOrder(category, order), HttpStatus.OK);
     }
 
     @GetMapping("/all")
-    public ResponseEntity<Object> getAllPosts() {
-        List<PostDTO> posts = postService.getAllPosts();
-        return new ResponseEntity<>(posts, HttpStatus.OK);
-    }
-
-    @GetMapping("/categoryorder/{category}")
-    public ResponseEntity<Object> findByCategoryWithOrder(@PathVariable String category, @RequestParam String order) {
-        List<PostDTO> posts = postService.findPostsByCategoryWithOrder(category, order);
-        return new ResponseEntity<>(posts, HttpStatus.OK);
-    }
-
-    @GetMapping("/allorder")
-    public ResponseEntity<Object> getAllPostsWithOrder(@RequestParam String order) {
-        List<PostDTO> posts = postService.getAllPostsWithOrder(order);
-        return new ResponseEntity<>(posts, HttpStatus.OK);
+    public ResponseEntity<Object> getAllPosts(@RequestParam String order) {
+        if(order.isEmpty()) return new ResponseEntity<>(postService.getAllPosts(), HttpStatus.OK);
+        else return new ResponseEntity<>(postService.getAllPostsWithOrder(order), HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")
@@ -79,9 +54,8 @@ public class PostController {
         return new ResponseEntity<>(true, HttpStatus.OK);
     }
 
-    @DeleteMapping("/deletemy/{id}")
-    public ResponseEntity<Boolean> deleteMyPost(@PathVariable long id) {
-        User user = (User) SecurityContextHolder.getContext().getAuthentication();
+    @DeleteMapping("/deleteMy/{id}")
+    public ResponseEntity<Boolean> deleteMyPost(@AuthenticationPrincipal UserDTO user, @PathVariable long id) {
         if(postService.getPostById(id).getUser().getId() == user.getId()) {
             postService.deletePost(id);
             return new ResponseEntity<>(true, HttpStatus.OK);
@@ -90,53 +64,30 @@ public class PostController {
 
     @PutMapping("/create")
     public ResponseEntity<PostDTO> createPost(@RequestBody CreatePostRequest request) {
-        PostDTO postDTO = new PostDTO();
-        postDTO.setTitle(request.getTitle());
-        postDTO.setPrice(request.getPrice());
-        postDTO.setPicture(request.getPicture());
-        postDTO.setDescription(request.getDescription());
-        postDTO.setPostTime(LocalDateTime.now());
-        postDTO.setPriority(request.isPriority());
-        postDTO.setActive(true);
-        postDTO.setCategory(request.getCategory());
-        postDTO.setUser((User) SecurityContextHolder.getContext().getAuthentication());
-        postService.createPost(postDTO);
-        return new ResponseEntity<PostDTO>(postDTO, HttpStatus.OK);
+        return new ResponseEntity<>(postService.createPost(request), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<PostDTO> getPostById(@PathVariable long id){
         PostDTO postDTO = postService.getPostById(id);
-        return new ResponseEntity<PostDTO>(postDTO, HttpStatus.OK);
+        return new ResponseEntity<>(postDTO, HttpStatus.OK);
     }
 
     @PutMapping("/{id}/comment")
-    public ResponseEntity<CommentDTO> createComment(@PathVariable long id, @RequestBody CreateMessageRequest request){
-        CommentDTO comment = new CommentDTO();
-        User user = (User) SecurityContextHolder.getContext().getAuthentication();
-        comment.setUserId(user.getId());
-        comment.setPostId(id);
-        comment.setCommentTime(LocalDateTime.now());
-        comment.setComment(request.getComment());
-        return new ResponseEntity<CommentDTO>(comment, HttpStatus.OK);
+    public ResponseEntity<CommentDTO> createComment(@AuthenticationPrincipal UserDTO user,
+                                                    @PathVariable long id, @RequestBody CreateCommentRequest request){
+        return new ResponseEntity<>(postService.createComment(user, id, request), HttpStatus.OK);
     }
 
     @PutMapping("/{id}/chat/create")
-    public ResponseEntity<ChatDTO> createChatWithSeller(@PathVariable long id){
-        User user = (User) SecurityContextHolder.getContext().getAuthentication();
+    public ResponseEntity<ChatDTO> createChatWithSeller(@AuthenticationPrincipal UserDTO user, @PathVariable long id){
         ChatDTO chat = postService.createChatWithSeller(id, user.getFirstname());
-        return new ResponseEntity<ChatDTO>(chat, HttpStatus.OK);
+        return new ResponseEntity<>(chat, HttpStatus.OK);
     }
 
     @GetMapping("/search")
-    public ResponseEntity<Object> searchPosts(@RequestParam String search){
-        List<PostDTO> posts = postService.searchPosts(search);
-        return new ResponseEntity<>(posts, HttpStatus.OK);
-    }
-
-    @GetMapping("/searchorder")
-    public ResponseEntity<Object> searchPostsWithOrder(@RequestParam String search, @RequestParam String order){
-        List<PostDTO> posts = postService.searchPostsWithOrder(search, order);
-        return new ResponseEntity<>(posts, HttpStatus.OK);
+    public ResponseEntity<Object> searchPosts(@RequestParam String search, @RequestParam String order){
+        if(order.isEmpty()) return new ResponseEntity<>(postService.searchPosts(search), HttpStatus.OK);
+        else return new ResponseEntity<>(postService.searchPostsWithOrder(search, order), HttpStatus.OK);
     }
 }

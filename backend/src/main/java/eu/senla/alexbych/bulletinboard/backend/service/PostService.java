@@ -1,18 +1,26 @@
 package eu.senla.alexbych.bulletinboard.backend.service;
 
+import eu.senla.alexbych.bulletinboard.backend.controller.request.CreateCommentRequest;
+import eu.senla.alexbych.bulletinboard.backend.controller.request.CreatePostRequest;
+import eu.senla.alexbych.bulletinboard.backend.controller.request.PostEditRequest;
+import eu.senla.alexbych.bulletinboard.backend.dto.CommentDTO;
+import eu.senla.alexbych.bulletinboard.backend.dto.UserDTO;
+import eu.senla.alexbych.bulletinboard.backend.model.Post;
+import eu.senla.alexbych.bulletinboard.backend.model.User;
+import eu.senla.alexbych.bulletinboard.backend.repository.CommentRepository;
 import eu.senla.alexbych.bulletinboard.backend.repository.PostRepository;
 import eu.senla.alexbych.bulletinboard.backend.dto.PostDTO;
-import eu.senla.alexbych.bulletinboard.backend.utils.converter.ChatConverter;
-import eu.senla.alexbych.bulletinboard.backend.utils.converter.ChatUserConverter;
-import eu.senla.alexbych.bulletinboard.backend.utils.converter.PostConverter;
+import eu.senla.alexbych.bulletinboard.backend.utils.converter.*;
 import eu.senla.alexbych.bulletinboard.chat.dto.ChatDTO;
 import eu.senla.alexbych.bulletinboard.chat.dto.ChatUserDTO;
 import eu.senla.alexbych.bulletinboard.backend.repository.ChatRepository;
 import eu.senla.alexbych.bulletinboard.backend.repository.ChatUserRepository;
-import eu.senla.alexbych.bulletinboard.backend.utils.converter.IChatUserConverter;
 import lombok.AllArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,11 +30,25 @@ import java.util.stream.Collectors;
 public class PostService {
 
     private final PostRepository postRepository;
-    private final PostConverter postConverter;
+    private final IPostConverter postConverter;
     private final ChatUserRepository chatUserRepository;
     private final ChatRepository chatRepository;
-    private final ChatConverter chatConverter;
-    private final ChatUserConverter chatUserConverter;
+    private final IChatConverter chatConverter;
+    private final IChatUserConverter chatUserConverter;
+    private final CommentRepository commentRepository;
+    private final ICommentConverter commentConverter;
+
+    public boolean editPost(UserDTO user, long id, PostEditRequest request){
+        PostDTO post = postConverter.convertPostToPostDTO(postRepository.getById(id));
+        if(post.getUser().getId() == user.getId()) {
+            if(!request.getTitle().isEmpty()) post.setTitle(request.getTitle());
+            if(!request.getPicture().isEmpty()) post.setPicture(request.getPicture());
+            if(!request.getDescription().isEmpty()) post.setDescription(request.getDescription());
+            if(request.getPrice() != post.getPrice()) post.setPrice(request.getPrice());
+            return true;
+        }
+            else return false;
+    }
 
     public PostDTO getPostById(long id){
         return postConverter.convertPostToPostDTO(postRepository.getById(id));
@@ -48,11 +70,12 @@ public class PostService {
     }
 
     public List<PostDTO> getAllPosts(){
-        List<PostDTO> posts = postRepository
-                .findAll()
-                .stream()
-                .map(postConverter::convertPostToPostDTO)
-                .collect(Collectors.toList());
+        List<PostDTO> posts = new ArrayList<>();
+        for (Post post : postRepository
+                .findAll()) {
+            PostDTO postDTO = postConverter.convertPostToPostDTO(post);
+            posts.add(postDTO);
+        }
         posts.sort(Comparator.comparing(PostDTO::isPriority));
         return posts;
     }
@@ -76,7 +99,17 @@ public class PostService {
         postRepository.deleteById(id);
     }
 
-    public PostDTO createPost(PostDTO postDTO){
+    public PostDTO createPost(CreatePostRequest request){
+        PostDTO postDTO = new PostDTO();
+        postDTO.setTitle(request.getTitle());
+        postDTO.setPrice(request.getPrice());
+        postDTO.setPicture(request.getPicture());
+        postDTO.setDescription(request.getDescription());
+        postDTO.setPostTime(LocalDateTime.now());
+        postDTO.setPriority(request.isPriority());
+        postDTO.setActive(true);
+        postDTO.setCategory(request.getCategory());
+        postDTO.setUser((User) SecurityContextHolder.getContext().getAuthentication());
         postRepository.save(postConverter.convertPostDTOToPost(postDTO));
         return postDTO;
     }
@@ -109,5 +142,15 @@ public class PostService {
         return postRepository.searchPostsWithOrder(search, order).stream()
                 .map(postConverter::convertPostToPostDTO)
                 .collect(Collectors.toList());
+    }
+
+    public CommentDTO createComment(UserDTO user, long id, CreateCommentRequest request){
+        CommentDTO comment = new CommentDTO();
+        comment.setUserId(user.getId());
+        comment.setPostId(id);
+        comment.setCommentTime(LocalDateTime.now());
+        comment.setComment(request.getComment());
+        commentRepository.save(commentConverter.convertCommentDTOToComment(comment));
+        return comment;
     }
 }

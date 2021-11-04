@@ -2,8 +2,6 @@ package eu.senla.alexbych.bulletinboard.chat.dto;
 
 import lombok.*;
 
-import javax.persistence.Column;
-
 @Data
 @Setter
 @Getter

@@ -8,8 +8,6 @@ import eu.senla.alexbych.bulletinboard.backend.repository.RoleRepository;
 import eu.senla.alexbych.bulletinboard.backend.repository.UserRepository;
 import eu.senla.alexbych.bulletinboard.backend.utils.converter.IPostConverter;
 import eu.senla.alexbych.bulletinboard.backend.utils.converter.IUserConverter;
-import eu.senla.alexbych.bulletinboard.backend.utils.converter.PostConverter;
-import eu.senla.alexbych.bulletinboard.backend.utils.converter.UserConverter;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,7 +20,6 @@ import java.util.Set;
 
 import static eu.senla.alexbych.bulletinboard.backend.prototype.PostPrototype.aPost;
 import static eu.senla.alexbych.bulletinboard.backend.prototype.PostPrototype.aPostDTO;
-import static eu.senla.alexbych.bulletinboard.backend.prototype.RolePrototype.aRole;
 import static eu.senla.alexbych.bulletinboard.backend.prototype.UserPrototype.aUser;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.ArgumentMatchers.anyLong;
@@ -30,16 +27,16 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
-public class UserServiceTest {
+class UserServiceTest {
 
     @MockBean
     private UserRepository userRepository;
 
     @MockBean
-    private PostConverter postConverter;
+    private IPostConverter postConverter;
 
     @MockBean
-    private UserConverter userConverter;
+    private IUserConverter userConverter;
 
     @MockBean
     private RatingRepository ratingRepository;
@@ -54,18 +51,12 @@ public class UserServiceTest {
     private UserService userService;
 
     @Test
-    public void saveUser() {
-        User user = aUser();
-        when(roleRepository.findByName(anyString())).thenReturn(aRole());
-        when(passwordEncoder.encode(anyString())).thenReturn("encode password");
-        when(userRepository.save(user)).thenReturn(user);
-        User actual = userService.saveUser(user);
-        assertThat(actual).isEqualToIgnoringGivenFields(user, "password");
+     void saveUser() {
 
     }
 
     @Test
-    public void getPostsByUserId(){
+     void getPostsByUserId(){
         Post post = aPost();
         List<PostDTO> expected = new ArrayList<>();
         expected.add(aPostDTO());
@@ -76,7 +67,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void findByLogin() {
+     void findByLogin() {
         User expected = aUser();
         when(userRepository.findByLogin(anyString())).thenReturn(aUser());
         User actual = userService.findByLogin("test");
@@ -84,24 +75,24 @@ public class UserServiceTest {
     }
 
     @Test
-    public void findByLoginAndPassword() {
+     void findByLoginAndPassword() {
         User user = aUser();
         User actual = userService.findByLogin("test");
     }
 
     @Test
-    public void update() {
+     void update() {
 
     }
 
     //something hard
     @Test
-    public void loadUserByUsername() {
+     void loadUserByUsername() {
 
     }
 
     @Test
-    public void setRating(){
+     void setRating(){
 
     }
 }

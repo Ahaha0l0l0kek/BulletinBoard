@@ -6,7 +6,7 @@ public class CategoryPrototype {
     public static Category aCategory(){
         Category category = new Category();
         category.setId(1);
-        category.setCategory("furniture");
+        category.setCategoryName("furniture");
         return category;
     }
 }

@@ -3,7 +3,6 @@ package eu.senla.alexbych.bulletinboard.backend.config.jwt;
 import eu.senla.alexbych.bulletinboard.backend.model.User;
 import eu.senla.alexbych.bulletinboard.backend.service.UserService;
 import lombok.extern.java.Log;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
@@ -24,11 +23,14 @@ public class JwtFilter extends GenericFilterBean {
 
     public static final String AUTHORIZATION = "Authorization";
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
-    @Autowired
-    private JwtProvider jwtProvider;
+    private final JwtProvider jwtProvider;
+
+    public JwtFilter(UserService userService, JwtProvider jwtProvider) {
+        this.userService = userService;
+        this.jwtProvider = jwtProvider;
+    }
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
