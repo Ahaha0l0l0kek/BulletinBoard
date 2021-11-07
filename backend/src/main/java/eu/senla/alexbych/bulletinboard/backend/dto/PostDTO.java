@@ -1,6 +1,5 @@
 package eu.senla.alexbych.bulletinboard.backend.dto;
 
-import eu.senla.alexbych.bulletinboard.backend.model.Category;
 import eu.senla.alexbych.bulletinboard.backend.model.Comment;
 import eu.senla.alexbych.bulletinboard.backend.model.User;
 import lombok.*;
@@ -22,7 +21,7 @@ public class PostDTO {
     private LocalDateTime postTime;
     private boolean priority;
     private boolean active;
-    private Category category;
+    private long categoryId;
     private User user;
     private Set<Comment> comments;
 }

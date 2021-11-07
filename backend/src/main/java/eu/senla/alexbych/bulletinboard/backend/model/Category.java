@@ -19,6 +19,6 @@ public class Category {
     @Column(name = "name", nullable = false)
     private String categoryName;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "categoryId")
     private Set<Post> posts;
 }

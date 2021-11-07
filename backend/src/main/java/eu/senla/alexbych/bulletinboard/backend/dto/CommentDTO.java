@@ -14,5 +14,5 @@ public class CommentDTO {
     private long userId;
     private long postId;
     private LocalDateTime commentTime;
-    private String comment;
+    private String commentText;
 }

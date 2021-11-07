@@ -26,8 +26,9 @@
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <jjwt.version>0.9.1</jjwt.version>
         <javax.validation.version>2.0.1.Final</javax.validation.version>
-        <hiber.version>7.0.0.Final</hiber.version>
+        <org.hibernate.version>7.0.0.Final</org.hibernate.version>
         <lombok.version>1.18.20</lombok.version>
+        <io.springfox.version>3.0.0</io.springfox.version>
     </properties>
 
     <dependencyManagement>
@@ -60,16 +61,35 @@
             <version>${javax.validation.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>7.0.0.Final</version>
+            <version>${org.hibernate.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${io.springfox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>${io.springfox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${io.springfox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-bean-validators</artifactId>
+            <version>${io.springfox.version}</version>
+        </dependency>
     </dependencies>
     </dependencyManagement>
-
 </project>

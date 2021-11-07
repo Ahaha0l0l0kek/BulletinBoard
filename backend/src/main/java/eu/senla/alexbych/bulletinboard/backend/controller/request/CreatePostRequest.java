@@ -1,6 +1,5 @@
 package eu.senla.alexbych.bulletinboard.backend.controller.request;
 
-import eu.senla.alexbych.bulletinboard.backend.model.Category;
 import lombok.Data;
 import lombok.NonNull;
 
@@ -21,5 +20,5 @@ public class CreatePostRequest {
     private boolean priority;
 
     @NonNull
-    private Category category;
+    private long categoryId;
 }

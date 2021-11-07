@@ -13,10 +13,10 @@ public class PostPrototype {
         post.setPrice(2300);
         post.setPicture("sofa.png");
         post.setDescription("nice sofa");
-        post.setPostTime(LocalDateTime.now());
+        post.setPostTime(LocalDateTime.of(2020, 3, 3, 3, 3));
         post.setPriority(false);
         post.setActive(true);
-        post.setCategory(CategoryPrototype.aCategory());
+        post.setCategoryId(1);
         post.setUser(UserPrototype.aUser());
         post.setComments(null);
         return post;
@@ -29,10 +29,10 @@ public class PostPrototype {
         post.setPrice(2300);
         post.setPicture("sofa.png");
         post.setDescription("nice sofa");
-        post.setPostTime(LocalDateTime.now());
+        post.setPostTime(LocalDateTime.of(2020, 3, 3, 3, 3));
         post.setPriority(false);
         post.setActive(true);
-        post.setCategory(CategoryPrototype.aCategory());
+        post.setCategoryId(1);
         post.setUser(UserPrototype.aUser());
         post.setComments(null);
         return post;

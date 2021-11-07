@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>cb541f73-0c14-480e-87d2-d74e36d4c32d.DATABASE:BulletinBoard</OriginalElement>
+  <nodes>
+    <node x="26.5" y="195.0">cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.categories</node>
+    <node x="153.5" y="129.0">cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.users</node>
+    <node x="179.5" y="0.0">cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.roles</node>
+    <node x="615.8" y="0.0">cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.databasechangelog</node>
+    <node x="299.79999999999995" y="894.0">cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.messages</node>
+    <node x="839.8" y="0.0">cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.databasechangeloglock</node>
+    <node x="253.29999999999998" y="469.0">cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.ratings</node>
+    <node x="381.29999999999995" y="480.5">cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.users_chat</node>
+    <node x="377.29999999999995" y="721.0">cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.chats</node>
+    <node x="50.30000000000001" y="699.0">cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.comments</node>
+    <node x="1.2999999999999545" y="392.0">cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.posts</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.comments" target="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.posts" relationship="REFERENCES">
+      <point x="-64.75000000000003" y="-72.5" />
+      <point x="115.04999999999998" y="673.0" />
+      <point x="116.79999999999995" y="673.0" />
+      <point x="0.0" y="127.5" />
+    </edge>
+    <edge source="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.chats" target="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.users_chat" relationship="REFERENCES">
+      <point x="29.0" y="-50.5" />
+      <point x="464.29999999999995" y="673.0" />
+      <point x="462.29999999999995" y="673.0" />
+      <point x="27.0" y="39.0" />
+    </edge>
+    <edge source="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.comments" target="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.users" relationship="REFERENCES">
+      <point x="64.74999999999997" y="-72.5" />
+      <point x="244.54999999999998" y="673.0" />
+      <point x="242.79999999999998" y="673.0" />
+      <point x="242.79999999999998" y="371.0" />
+      <point x="307.29999999999995" y="371.0" />
+      <point x="307.29999999999995" y="361.0" />
+      <point x="288.5" y="361.0" />
+      <point x="45.0" y="105.5" />
+    </edge>
+    <edge source="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.posts" target="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.categories" relationship="REFERENCES">
+      <point x="-57.75" y="-127.5" />
+      <point x="59.049999999999955" y="371.0" />
+      <point x="80.0" y="371.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.posts" target="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.users" relationship="REFERENCES">
+      <point x="57.75" y="-127.5" />
+      <point x="174.54999999999995" y="371.0" />
+      <point x="198.5" y="371.0" />
+      <point x="-45.0" y="105.5" />
+    </edge>
+    <edge source="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.users_chat" target="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.users" relationship="REFERENCES">
+      <point x="0.0" y="-39.0" />
+      <point x="435.29999999999995" y="371.0" />
+      <point x="307.29999999999995" y="371.0" />
+      <point x="307.29999999999995" y="361.0" />
+      <point x="288.5" y="361.0" />
+      <point x="45.0" y="105.5" />
+    </edge>
+    <edge source="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.ratings" target="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.users" relationship="REFERENCES">
+      <point x="0.0" y="-50.5" />
+      <point x="307.29999999999995" y="361.0" />
+      <point x="288.5" y="361.0" />
+      <point x="45.0" y="105.5" />
+    </edge>
+    <edge source="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.users" target="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.roles" relationship="REFERENCES">
+      <point x="0.0" y="-105.5" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.messages" target="cb541f73-0c14-480e-87d2-d74e36d4c32d.TABLE:BulletinBoard.public.chats" relationship="REFERENCES">
+      <point x="0.0" y="-72.5" />
+      <point x="0.0" y="50.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6317280453257791" showDependencies="false" x="518.5" y="519.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

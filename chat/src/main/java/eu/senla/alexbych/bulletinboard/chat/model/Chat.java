@@ -24,6 +24,7 @@ public class Chat {
     @JoinColumn(name = "buyer_id")
     private ChatUser buyer;
 
+    @Transient
     @OneToMany
     private List<Message> messages;
 }

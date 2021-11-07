@@ -4,6 +4,8 @@ import eu.senla.alexbych.bulletinboard.backend.controller.request.ProfileEditReq
 import eu.senla.alexbych.bulletinboard.backend.dto.PostDTO;
 import eu.senla.alexbych.bulletinboard.backend.dto.UserDTO;
 import eu.senla.alexbych.bulletinboard.backend.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +31,16 @@ public class UserController {
     @GetMapping("/posts")
     public ResponseEntity<Object> postsOfUser(@AuthenticationPrincipal UserDTO user) {
         List<PostDTO> posts = userService.getPostsByUserId(user.getId());
-        return new ResponseEntity<>(posts, HttpStatus.OK);
+        if(!posts.isEmpty()) return new ResponseEntity<>(posts, HttpStatus.OK);
+        else return ResponseEntity.status(HttpStatus.NOT_FOUND).body("you have no posts yet");
+
+    }
+
+    @GetMapping("/{id}/posts")
+    public ResponseEntity<Object> postsOfUser(@PathVariable long id) {
+        List<PostDTO> posts = userService.getPostsByUserId(id);
+        if(!posts.isEmpty()) return new ResponseEntity<>(posts, HttpStatus.OK);
+        else return ResponseEntity.status(HttpStatus.NOT_FOUND).body("user have no posts yet");
     }
 
     @PatchMapping("/{id}/setRating")

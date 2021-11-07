@@ -153,11 +153,11 @@
             (
             id bigserial primary key,
             user_id bigint not null,
-            rate double precision not null,
+            rate int not null,
             foreign key (user_id) references users (id) on delete cascade,
 
             constraint valid_number
-            check (id &lt;= 5)
+            check (rate &lt;= 5)
             );
         </sql>
         <rollback>
@@ -187,9 +187,9 @@
 
     <changeSet id="insert_values_into_users" author="alexey">
         <sql>
-            insert into users values(1, 'alex', 'password1', 'Alex', 'Bych', '88888888888', 5, 1);
-            insert into users values(2, 'pasha', 'password2', 'Pavel', 'F', '99999999999', 3, 2);
-            insert into users values(3, 'masha', 'password3', 'Maria', 'G', '11111111111', 2, 2);
+            insert into users values(1, 'alex', '$2a$10$1acsWdd4pqEjhwNJILBewe4W0DhSUDJNZ2OY69SHeAR8myfk.cpnO', 'Alex', 'Bych', '88888888888', 5, 1);
+            insert into users values(2, 'pasha', '$2a$10$0tXdWvUMkA8isuoThV382eukTowDLv.dxalHQdMWi61MIRarIJiOu', 'Pavel', 'F', '99999999999', 3, 2);
+            insert into users values(3, 'masha', '$2a$10$FSrXOz6cir4UiLDMgOwiAegOWWE6NnCpxITmdUofy2YCCoDdHAhbC', 'Maria', 'G', '11111111111', 2, 2);
         </sql>
         <rollback>
             delete from posts where id &lt; 4;

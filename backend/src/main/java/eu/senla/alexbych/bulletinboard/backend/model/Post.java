@@ -38,14 +38,13 @@ public class Post {
     @Column(name = "priority")
     private boolean priority;
 
-    @ManyToOne
-    @JoinColumn(name = "Category_id")
-    private Category category;
+    @Column(name = "Category_id")
+    private long categoryId;
 
     @ManyToOne
     @JoinColumn(name = "seller_id")
     private User user;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "postId")
     private Set<Comment> comments;
 }

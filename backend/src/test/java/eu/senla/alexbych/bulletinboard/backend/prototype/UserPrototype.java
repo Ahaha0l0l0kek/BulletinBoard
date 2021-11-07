@@ -15,8 +15,7 @@ public class UserPrototype {
         user.setLastname("Bych");
         user.setPhoneNumber("88888888888");
         user.setRole(RolePrototype.aRole());
-        user.setPosts(Set.of(PostPrototype.aPost()));
-        user.setRating(4);
+        user.setRating(0);
         user.setRatings(Set.of(RatingPrototype.aRating(), RatingPrototype.bRating()));
         return user;
     }
@@ -30,8 +29,7 @@ public class UserPrototype {
         user.setLastname("Bych");
         user.setPhoneNumber("88888888888");
         user.setRole(RolePrototype.aRole());
-        user.setPosts(Set.of(PostPrototype.aPost()));
-        user.setRating(4);
+        user.setRating(0);
         user.setRatings(Set.of(RatingPrototype.aRating(), RatingPrototype.bRating()));
         return user;
     }

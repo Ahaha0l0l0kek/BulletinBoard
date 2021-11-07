@@ -3,10 +3,7 @@ package eu.senla.alexbych.bulletinboard.backend.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Max;
 
 @Entity
@@ -16,7 +13,9 @@ import javax.validation.constraints.Max;
 public class Rating {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
 
     @Column(name = "user_id")
     private long userId;
