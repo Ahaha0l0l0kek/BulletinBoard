@@ -1,7 +1,6 @@
 package eu.senla.alexbych.bulletinboard.backend.config.jwt;
 
 import eu.senla.alexbych.bulletinboard.backend.dto.UserDTO;
-import eu.senla.alexbych.bulletinboard.backend.model.User;
 import eu.senla.alexbych.bulletinboard.backend.service.UserService;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;

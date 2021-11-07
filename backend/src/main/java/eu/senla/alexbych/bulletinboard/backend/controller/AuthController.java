@@ -1,11 +1,11 @@
 package eu.senla.alexbych.bulletinboard.backend.controller;
 
-import eu.senla.alexbych.bulletinboard.backend.dto.UserDTO;
-import eu.senla.alexbych.bulletinboard.backend.service.UserService;
 import eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtProvider;
 import eu.senla.alexbych.bulletinboard.backend.controller.request.AuthRequest;
 import eu.senla.alexbych.bulletinboard.backend.controller.request.RegistrationRequest;
 import eu.senla.alexbych.bulletinboard.backend.controller.response.AuthResponse;
+import eu.senla.alexbych.bulletinboard.backend.dto.UserDTO;
+import eu.senla.alexbych.bulletinboard.backend.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

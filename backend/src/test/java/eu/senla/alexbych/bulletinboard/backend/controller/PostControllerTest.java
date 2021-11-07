@@ -1,23 +1,18 @@
 package eu.senla.alexbych.bulletinboard.backend.controller;
 
-import eu.senla.alexbych.bulletinboard.backend.dto.PostDTO;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.security.test.context.support.WithUserDetails;
 import org.springframework.test.context.TestPropertySource;
-import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -28,36 +23,6 @@ class PostControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
-
-    @Test
-    void editPost() {
-    }
-
-    @Test
-    void boostPostPriority() {
-    }
-
-    @Test
-    void findByCategory() {
-    }
-
-    @Test
-    void getAllPosts() {
-
-    }
-
-    @Test
-    void deletePost() {
-    }
-
-    @Test
-    void deleteMyPost() {
-    }
-
-    @Test
-    void createPost() {
-    }
-
 
     @Test
     void getPostById() throws Exception{
@@ -104,22 +69,5 @@ class PostControllerTest {
                         "        }\n" +
                         "    ]\n" +
                         "}"));
-    }
-
-    @Sql(value = "delete from comments where comment = 'test comment'", executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
-    @Test
-    void createComment() throws Exception {
-        mockMvc.perform(post("/post/2/createComment")).andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().contentType("application/json;charset=UTF-8"))
-                .andExpect(jsonPath("$.comment").value("test comment"))
-                .andDo(MockMvcResultHandlers.print());
-    }
-
-    @Test
-    void createChatWithSeller() {
-    }
-
-    @Test
-    void searchPosts() {
     }
 }

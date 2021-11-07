@@ -4,8 +4,6 @@ import eu.senla.alexbych.bulletinboard.backend.controller.request.ProfileEditReq
 import eu.senla.alexbych.bulletinboard.backend.dto.PostDTO;
 import eu.senla.alexbych.bulletinboard.backend.dto.UserDTO;
 import eu.senla.alexbych.bulletinboard.backend.service.UserService;
-import io.swagger.annotations.Api;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

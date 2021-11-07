@@ -1,9 +1,12 @@
 package eu.senla.alexbych.bulletinboard.backend.dto;
 
 import eu.senla.alexbych.bulletinboard.backend.model.Post;
-import eu.senla.alexbych.bulletinboard.backend.model.Role;
 import eu.senla.alexbych.bulletinboard.backend.model.Rating;
-import lombok.*;
+import eu.senla.alexbych.bulletinboard.backend.model.Role;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

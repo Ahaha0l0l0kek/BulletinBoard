@@ -2,7 +2,10 @@ package eu.senla.alexbych.bulletinboard.backend.dto;
 
 import eu.senla.alexbych.bulletinboard.backend.model.Comment;
 import eu.senla.alexbych.bulletinboard.backend.model.User;
-import lombok.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.Set;

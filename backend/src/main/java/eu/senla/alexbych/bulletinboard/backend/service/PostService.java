@@ -4,10 +4,10 @@ import eu.senla.alexbych.bulletinboard.backend.controller.request.CreateCommentR
 import eu.senla.alexbych.bulletinboard.backend.controller.request.CreatePostRequest;
 import eu.senla.alexbych.bulletinboard.backend.controller.request.PostEditRequest;
 import eu.senla.alexbych.bulletinboard.backend.dto.CommentDTO;
+import eu.senla.alexbych.bulletinboard.backend.dto.PostDTO;
 import eu.senla.alexbych.bulletinboard.backend.dto.UserDTO;
 import eu.senla.alexbych.bulletinboard.backend.model.Post;
 import eu.senla.alexbych.bulletinboard.backend.repository.*;
-import eu.senla.alexbych.bulletinboard.backend.dto.PostDTO;
 import eu.senla.alexbych.bulletinboard.backend.utils.compatator.PostComparator;
 import eu.senla.alexbych.bulletinboard.backend.utils.converter.*;
 import eu.senla.alexbych.bulletinboard.chat.dto.ChatDTO;

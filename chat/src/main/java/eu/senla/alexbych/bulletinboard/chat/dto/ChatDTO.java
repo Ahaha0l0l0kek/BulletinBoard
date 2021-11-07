@@ -2,7 +2,10 @@ package eu.senla.alexbych.bulletinboard.chat.dto;
 
 import eu.senla.alexbych.bulletinboard.chat.model.ChatUser;
 import eu.senla.alexbych.bulletinboard.chat.model.Message;
-import lombok.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 

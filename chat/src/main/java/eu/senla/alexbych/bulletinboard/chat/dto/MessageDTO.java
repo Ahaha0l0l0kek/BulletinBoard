@@ -1,7 +1,10 @@
 package eu.senla.alexbych.bulletinboard.chat.dto;
 
 import eu.senla.alexbych.bulletinboard.chat.model.ChatRole;
-import lombok.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 

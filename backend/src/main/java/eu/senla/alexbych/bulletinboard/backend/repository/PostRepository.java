@@ -1,7 +1,6 @@
 package eu.senla.alexbych.bulletinboard.backend.repository;
 
 import eu.senla.alexbych.bulletinboard.backend.model.Post;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
