@@ -43,12 +43,14 @@ public class PostService {
     @Transactional
     public PostDTO editPost(UserDTO user, long id, PostEditRequest request){
         Post post = postRepository.getById(id);
+        log.info("Getting post with id " + id + " : " + post);
         if(post.getUser().getId() == user.getId()) {
             if(!request.getTitle().isEmpty()) post.setTitle(request.getTitle());
             if(!request.getPicture().isEmpty()) post.setPicture(request.getPicture());
             if(!request.getDescription().isEmpty()) post.setDescription(request.getDescription());
             if(request.getPrice() != post.getPrice()) post.setPrice(request.getPrice());
             postRepository.save(post);
+            log.info("Saved post with id " + id + " : " + post);
             return postConverter.convertPostToPostDTO(post);
         }
             else return null;
@@ -56,13 +58,16 @@ public class PostService {
 
     @Transactional(readOnly = true)
     public PostDTO getPostById(long id){
+        log.info("Getting post with id " + id);
         return postConverter.convertPostToPostDTO(postRepository.getById(id));
     }
 
     public PostDTO boostPostPriority(long id){
         PostDTO post = postConverter.convertPostToPostDTO(postRepository.getById(id));
+        log.info("Received post with id " + id + " : " + post);
         post.setPriority(true);
         postRepository.save(postConverter.convertPostDTOToPost(post));
+        log.info("Saved post with id " + id + " : " + post);
         return post;
     }
 
@@ -88,6 +93,7 @@ public class PostService {
         }
         posts.sort(Comparator.comparing(PostDTO::isPriority));
         posts.sort(new PostComparator());
+        log.info("Received all posts : " + posts);
         return posts;
     }
 
@@ -102,6 +108,7 @@ public class PostService {
     @Transactional
     public void deletePost(long id){
         postRepository.deleteById(id);
+        log.info("Deleted post with id " + id);
     }
 
     @Transactional
@@ -117,6 +124,7 @@ public class PostService {
         postDTO.setCategoryId(request.getCategoryId());
         postDTO.setUser(userConverter.convertUserDTOToUser(user));
         postRepository.save(postConverter.convertPostDTOToPost(postDTO));
+        log.info("Saved post : " + postDTO);
         return postDTO;
     }
 
@@ -136,6 +144,8 @@ public class PostService {
 
         chatRepository.save(chatConverter.convertChatDTOToChat(chat));
 
+        log.info("created chat : " + chat);
+
         return chat;
     }
 
@@ -146,6 +156,7 @@ public class PostService {
                 .collect(Collectors.toList());
         if(minPrice != 0) return list.stream().filter(o -> o.getPrice() > minPrice).collect(Collectors.toList());
         if(maxPrice != 0) return list.stream().filter(o -> o.getPrice() < maxPrice).collect(Collectors.toList());
+        log.info("Received posts : " + list);
         return list;
     }
 
@@ -156,6 +167,7 @@ public class PostService {
                 .collect(Collectors.toList());
         if(minPrice != 0) return list.stream().filter(o -> o.getPrice() > minPrice).collect(Collectors.toList());
         if(maxPrice != 0) return list.stream().filter(o -> o.getPrice() < maxPrice).collect(Collectors.toList());
+        log.info("Received posts : " + list);
         return list;
     }
 
@@ -167,6 +179,7 @@ public class PostService {
         comment.setCommentTime(LocalDateTime.now());
         comment.setCommentText(request.getComment());
         commentRepository.save(commentConverter.convertCommentDTOToComment(comment));
+        log.info("Created comment " + comment + " on post with id " + id);
         return comment;
     }
 }

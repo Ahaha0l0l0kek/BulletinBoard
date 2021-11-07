@@ -54,6 +54,7 @@ public class UserService implements UserDetailsService {
         if(!profile.getPhoneNumber().isEmpty())
             user.setPhoneNumber(profile.getPhoneNumber());
         userRepository.save(userConverter.convertUserDTOToUser(user));
+        log.info("User " + user + " was edited");
         return user;
     }
 
@@ -69,6 +70,7 @@ public class UserService implements UserDetailsService {
         Role userRole = roleRepository.findByName("ROLE_USER");
         user.setRole(userRole);
         userRepository.save(userConverter.convertUserDTOToUser(user));
+        log.info("Created user " + user);
         return user;
     }
 
@@ -113,11 +115,16 @@ public class UserService implements UserDetailsService {
     public UserDTO loadUserByUsername(String username) throws UsernameNotFoundException {
         UserDTO user = findByLogin(username);
         user.getAuthorities();
+
         return user;
     }
 
     @Transactional
-    public void setRating(long id, int rating){
+    public boolean setRating(long id, int rating){
+        if(rating > 5) {
+            log.warn("Not valid rating. Put the number less or equal than 5");
+            return false;
+        }
         Rating ratingObject = new Rating();
         ratingObject.setUserId(id);
         ratingObject.setRate(rating);
@@ -133,5 +140,7 @@ public class UserService implements UserDetailsService {
             sum = sum/ratings.size();
         }
         userRepository.updateRating(sum, id);
+        log.info("User with id " + id + "rated " + sum);
+        return true;
     }
 }

@@ -44,8 +44,7 @@ public class UserController {
     }
 
     @PatchMapping("/{id}/setRating")
-    public ResponseEntity<Boolean> setRating(@PathVariable long id, @RequestParam int rating){
-        userService.setRating(id, rating);
-        return new ResponseEntity<>(true, HttpStatus.OK);
+    public ResponseEntity<Boolean> setRating(@PathVariable long id, @RequestParam int r){
+        return new ResponseEntity<>(userService.setRating(id, r), HttpStatus.OK);
     }
 }
