@@ -7,5 +7,4 @@ import org.mapstruct.Mapper;
 @Mapper
 public interface IChatUserConverter {
     ChatUser convertChatUserDTOToChatUser(ChatUserDTO chatUserDTO);
-    ChatUserDTO convertChatUserToChatUserDTO(ChatUser chatUser);
 }

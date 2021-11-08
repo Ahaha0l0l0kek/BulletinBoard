@@ -7,5 +7,4 @@ import org.mapstruct.Mapper;
 @Mapper
 public interface ICommentConverter {
     Comment convertCommentDTOToComment(CommentDTO commentDTO);
-    CommentDTO convertCommentToCommentDTO(Comment comment);
 }

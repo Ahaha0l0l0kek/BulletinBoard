@@ -1,187 +1,34 @@
-2021-11-07 18:49:24.346  INFO 4668 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 4668 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
-2021-11-07 18:49:24.348  INFO 4668 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
-2021-11-07 18:49:24.999  INFO 4668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-11-07 18:49:25.062  INFO 4668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 8 JPA repository interfaces.
-2021-11-07 18:49:25.618  INFO 4668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-11-07 18:49:25.625  INFO 4668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-07 18:49:25.625  INFO 4668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-11-07 18:49:25.720  INFO 4668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-07 18:49:25.721  INFO 4668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1338 ms
-2021-11-07 18:49:25.801  INFO 4668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-07 18:49:25.918  INFO 4668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-07 18:49:26.196  INFO 4668 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
-2021-11-07 18:49:26.581  INFO 4668 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
-2021-11-07 18:49:26.606  INFO 4668 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2021-11-07 18:49:26.609  INFO 4668 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
-2021-11-07 18:49:26.610  WARN 4668 --- [main] liquibase.hub                            : Skipping auto-registration
-2021-11-07 18:49:26.616  INFO 4668 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2021-11-07 18:49:26.683  INFO 4668 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-11-07 18:49:26.712  INFO 4668 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-11-07 18:49:26.800  INFO 4668 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-11-07 18:49:26.865  INFO 4668 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
-2021-11-07 18:49:27.268  INFO 4668 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-11-07 18:49:27.274  INFO 4668 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-07 18:49:27.613  WARN 4668 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-07 18:49:28.051  INFO 4668 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34714012, org.springframework.security.web.context.SecurityContextPersistenceFilter@23973547, org.springframework.security.web.header.HeaderWriterFilter@4a10e65b, org.springframework.security.web.authentication.logout.LogoutFilter@5e572ad6, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@22195d06, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b6558aa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@593d0173, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49a0fe14, org.springframework.security.web.session.SessionManagementFilter@2aadeb31, org.springframework.security.web.access.ExceptionTranslationFilter@d0456ad, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3393aa46]
-2021-11-07 18:49:28.270  INFO 4668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-11-07 18:49:28.689  INFO 4668 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 4.685 seconds (JVM running for 5.349)
-2021-11-07 18:49:39.124  INFO 4668 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-07 18:49:39.124  INFO 4668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-11-07 18:49:39.125  INFO 4668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-11-07 18:49:39.134  INFO 4668 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 18:49:39.233  INFO 4668 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 18:49:39.256  INFO 4668 --- [http-nio-8080-exec-1] e.s.a.b.backend.service.PostService      : Getting post with id 1
-2021-11-07 18:50:14.861  INFO 4668 --- [http-nio-8080-exec-3] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 18:50:14.864  INFO 4668 --- [http-nio-8080-exec-3] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 18:50:14.885  INFO 4668 --- [http-nio-8080-exec-3] e.s.a.b.backend.service.PostService      : Getting all posts : [PostDTO(id=1, title=sofa, price=2300.0, picture=sofa.png, description=super sofa, very soft, postTime=2020-01-01T00:00, priority=false, active=true, categoryId=1, user=eu.senla.alexbych.bulletinboard.backend.model.User@1630e689, comments=[eu.senla.alexbych.bulletinboard.backend.model.Comment@64129212, eu.senla.alexbych.bulletinboard.backend.model.Comment@3edc8fda]), PostDTO(id=2, title=pants nike, price=3000.0, picture=pants_nike.png, description=new pants, XXL, postTime=2020-07-11T00:00, priority=true, active=true, categoryId=2, user=eu.senla.alexbych.bulletinboard.backend.model.User@1630e689, comments=[eu.senla.alexbych.bulletinboard.backend.model.Comment@57532fbf]), PostDTO(id=3, title=jacket gucci, price=40500.0, picture=lol.png, description=original, postTime=2021-10-09T00:00, priority=false, active=true, categoryId=2, user=eu.senla.alexbych.bulletinboard.backend.model.User@7e64cf07, comments=[])]
-2021-11-07 18:56:54.078  INFO 4668 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-07 18:56:54.082  INFO 4668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-07 18:56:54.085  INFO 4668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-11-07 18:57:01.961  INFO 9944 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 9944 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
-2021-11-07 18:57:01.963  INFO 9944 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
-2021-11-07 18:57:02.616  INFO 9944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-11-07 18:57:02.681  INFO 9944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 8 JPA repository interfaces.
-2021-11-07 18:57:03.275  INFO 9944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-11-07 18:57:03.282  INFO 9944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-07 18:57:03.282  INFO 9944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-11-07 18:57:03.379  INFO 9944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-07 18:57:03.380  INFO 9944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1382 ms
-2021-11-07 18:57:03.466  INFO 9944 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-07 18:57:03.578  INFO 9944 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-07 18:57:03.863  INFO 9944 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
-2021-11-07 18:57:04.266  INFO 9944 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
-2021-11-07 18:57:04.295  INFO 9944 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2021-11-07 18:57:04.299  INFO 9944 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
-2021-11-07 18:57:04.300  WARN 9944 --- [main] liquibase.hub                            : Skipping auto-registration
-2021-11-07 18:57:04.306  INFO 9944 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2021-11-07 18:57:04.374  INFO 9944 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-11-07 18:57:04.402  INFO 9944 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-11-07 18:57:04.497  INFO 9944 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-11-07 18:57:04.561  INFO 9944 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
-2021-11-07 18:57:04.968  INFO 9944 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-11-07 18:57:04.974  INFO 9944 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-07 18:57:05.326  WARN 9944 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-07 18:57:05.775  INFO 9944 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7eb006bd, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e640411, org.springframework.security.web.header.HeaderWriterFilter@29ceefb3, org.springframework.security.web.authentication.logout.LogoutFilter@12ef7db5, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@5da41d02, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fe19d0e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36109a76, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@633dce39, org.springframework.security.web.session.SessionManagementFilter@622c658d, org.springframework.security.web.access.ExceptionTranslationFilter@6ed87b1c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@75c0e6be]
-2021-11-07 18:57:06.017  INFO 9944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-11-07 18:57:06.443  INFO 9944 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 4.851 seconds (JVM running for 5.403)
-2021-11-07 18:57:58.197  INFO 9944 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-07 18:57:58.197  INFO 9944 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-11-07 18:57:58.198  INFO 9944 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-11-07 18:57:58.208  INFO 9944 --- [http-nio-8080-exec-2] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 18:57:58.308  INFO 9944 --- [http-nio-8080-exec-2] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 18:59:15.501  INFO 9944 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 18:59:15.505  INFO 9944 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 19:00:10.995  INFO 9944 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-07 19:00:10.997  INFO 9944 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-07 19:00:10.999  INFO 9944 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-11-07 19:00:15.752  WARN 18032 --- [main] liquibase.hub                            : Skipping auto-registration
-2021-11-07 19:00:16.766  WARN 18032 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-07 19:02:11.415  INFO 8008 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 8008 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
-2021-11-07 19:02:11.417  INFO 8008 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
-2021-11-07 19:02:12.075  INFO 8008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-11-07 19:02:12.144  INFO 8008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 8 JPA repository interfaces.
-2021-11-07 19:02:12.727  INFO 8008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-11-07 19:02:12.736  INFO 8008 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-07 19:02:12.736  INFO 8008 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-11-07 19:02:12.838  INFO 8008 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-07 19:02:12.839  INFO 8008 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1386 ms
-2021-11-07 19:02:12.925  INFO 8008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-07 19:02:13.050  INFO 8008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-07 19:02:13.408  INFO 8008 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
-2021-11-07 19:02:13.778  INFO 8008 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
-2021-11-07 19:02:13.804  INFO 8008 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2021-11-07 19:02:13.807  INFO 8008 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
-2021-11-07 19:02:13.808  WARN 8008 --- [main] liquibase.hub                            : Skipping auto-registration
-2021-11-07 19:02:13.814  INFO 8008 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2021-11-07 19:02:13.883  INFO 8008 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-11-07 19:02:13.913  INFO 8008 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-11-07 19:02:14.005  INFO 8008 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-11-07 19:02:14.070  INFO 8008 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
-2021-11-07 19:02:14.475  INFO 8008 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-11-07 19:02:14.482  INFO 8008 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-07 19:02:14.834  WARN 8008 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-07 19:02:15.290  INFO 8008 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@470fc16c, org.springframework.security.web.context.SecurityContextPersistenceFilter@78a46d7b, org.springframework.security.web.header.HeaderWriterFilter@65cb50dc, org.springframework.security.web.authentication.logout.LogoutFilter@242a3997, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@2f6352a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3509f32d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12ef7db5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d0cc47d, org.springframework.security.web.session.SessionManagementFilter@4dfbe8c2, org.springframework.security.web.access.ExceptionTranslationFilter@704ddfad, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f98859a]
-2021-11-07 19:02:15.515  INFO 8008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-11-07 19:02:15.927  INFO 8008 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 4.86 seconds (JVM running for 5.415)
-2021-11-07 19:02:18.575  INFO 8008 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-07 19:02:18.576  INFO 8008 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-11-07 19:02:18.578  INFO 8008 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-11-07 19:02:18.589  INFO 8008 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 19:02:18.696  INFO 8008 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 19:03:08.467  INFO 8008 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 19:03:08.471  INFO 8008 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 19:03:57.164  INFO 8008 --- [http-nio-8080-exec-6] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 19:03:57.171  INFO 8008 --- [http-nio-8080-exec-6] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 19:03:57.207  WARN 8008 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23514
-2021-11-07 19:03:57.207 ERROR 8008 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: новая строка в отношении "ratings" нарушает ограничение-проверку "valid_number"
-  Подробности: Ошибочная строка содержит (7, 2, 7).
-2021-11-07 19:04:32.179  INFO 8008 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-07 19:04:32.180  INFO 8008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-07 19:04:32.183  INFO 8008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-11-07 19:04:36.125  INFO 5696 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 5696 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
-2021-11-07 19:04:36.128  INFO 5696 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
-2021-11-07 19:04:36.824  INFO 5696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-11-07 19:04:36.891  INFO 5696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 8 JPA repository interfaces.
-2021-11-07 19:04:37.482  INFO 5696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-11-07 19:04:37.488  INFO 5696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-07 19:04:37.488  INFO 5696 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-11-07 19:04:37.581  INFO 5696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-07 19:04:37.582  INFO 5696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1397 ms
-2021-11-07 19:04:37.667  INFO 5696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-07 19:04:37.786  INFO 5696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-07 19:04:38.069  INFO 5696 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
-2021-11-07 19:04:38.469  INFO 5696 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
-2021-11-07 19:04:38.497  INFO 5696 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2021-11-07 19:04:38.502  INFO 5696 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
-2021-11-07 19:04:38.502  WARN 5696 --- [main] liquibase.hub                            : Skipping auto-registration
-2021-11-07 19:04:38.508  INFO 5696 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2021-11-07 19:04:38.577  INFO 5696 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-11-07 19:04:38.606  INFO 5696 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-11-07 19:04:38.699  INFO 5696 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-11-07 19:04:38.770  INFO 5696 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
-2021-11-07 19:04:39.186  INFO 5696 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-11-07 19:04:39.193  INFO 5696 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-07 19:04:39.558  WARN 5696 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-07 19:04:40.012  INFO 5696 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56dae6, org.springframework.security.web.context.SecurityContextPersistenceFilter@3509f32d, org.springframework.security.web.header.HeaderWriterFilter@67e12e28, org.springframework.security.web.authentication.logout.LogoutFilter@38816a6c, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@77262e71, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@440e2406, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a8cc099, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57fe6f2d, org.springframework.security.web.session.SessionManagementFilter@78a46d7b, org.springframework.security.web.access.ExceptionTranslationFilter@3ed4c822, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3582077c]
-2021-11-07 19:04:40.253  INFO 5696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-11-07 19:04:40.680  INFO 5696 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 4.877 seconds (JVM running for 5.451)
-2021-11-07 19:04:43.721  INFO 5696 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-07 19:04:43.721  INFO 5696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-11-07 19:04:43.722  INFO 5696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2021-11-07 19:04:43.732  INFO 5696 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 19:04:43.827  INFO 5696 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 19:04:58.552  INFO 5696 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 19:04:58.556  INFO 5696 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
-2021-11-07 19:04:58.562  WARN 5696 --- [http-nio-8080-exec-4] e.s.a.b.backend.service.UserService      : Not valid rating. Put the number less or equal than 5
-2021-11-07 19:06:35.186  INFO 5696 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-07 19:06:35.189  INFO 5696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-07 19:06:35.192  INFO 5696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-11-07 19:06:39.152  INFO 9604 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 9604 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
-2021-11-07 19:06:39.154  INFO 9604 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
-2021-11-07 19:06:39.811  INFO 9604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-11-07 19:06:39.878  INFO 9604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 8 JPA repository interfaces.
-2021-11-07 19:06:40.468  INFO 9604 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-11-07 19:06:40.474  INFO 9604 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-07 19:06:40.474  INFO 9604 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-11-07 19:06:40.573  INFO 9604 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-07 19:06:40.574  INFO 9604 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1382 ms
-2021-11-07 19:06:40.658  INFO 9604 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-07 19:06:40.774  INFO 9604 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-07 19:06:41.062  INFO 9604 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
-2021-11-07 19:06:41.444  INFO 9604 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
-2021-11-07 19:06:41.471  INFO 9604 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2021-11-07 19:06:41.475  INFO 9604 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
-2021-11-07 19:06:41.475  WARN 9604 --- [main] liquibase.hub                            : Skipping auto-registration
-2021-11-07 19:06:41.481  INFO 9604 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2021-11-07 19:06:41.549  INFO 9604 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-11-07 19:06:41.579  INFO 9604 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-11-07 19:06:41.667  INFO 9604 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-11-07 19:06:41.736  INFO 9604 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
-2021-11-07 19:06:42.145  INFO 9604 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-11-07 19:06:42.152  INFO 9604 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-07 19:06:42.487  WARN 9604 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-07 19:06:42.939  INFO 9604 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f98859a, org.springframework.security.web.context.SecurityContextPersistenceFilter@530aa75c, org.springframework.security.web.header.HeaderWriterFilter@5e609b42, org.springframework.security.web.authentication.logout.LogoutFilter@2052c49f, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@1f591b2e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a0a93ce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@440e2406, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e95c023, org.springframework.security.web.session.SessionManagementFilter@7b8d1537, org.springframework.security.web.access.ExceptionTranslationFilter@6b4376e1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ed7db72]
-2021-11-07 19:06:43.167  INFO 9604 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-11-07 19:06:43.583  INFO 9604 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 4.771 seconds (JVM running for 5.293)
-2021-11-07 20:20:05.687  WARN 9604 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m23s971ms533µs400ns).
-2021-11-07 21:27:46.768  WARN 9604 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s12ms235µs800ns).
+2021-11-08 10:38:04.987  WARN 9604 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10h1m13s226ms990µs500ns).
+2021-11-08 10:47:34.658  INFO 9604 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 10:47:34.700  INFO 9604 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 10:47:34.718  INFO 9604 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 10:52:07.999  INFO 1356 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 1356 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 10:52:08.002  INFO 1356 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 10:52:08.701  INFO 1356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 10:52:08.774  INFO 1356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 8 JPA repository interfaces.
+2021-11-08 10:52:09.462  INFO 1356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 10:52:09.469  INFO 1356 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 10:52:09.470  INFO 1356 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 10:52:09.572  INFO 1356 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 10:52:09.572  INFO 1356 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1534 ms
+2021-11-08 10:52:09.659  INFO 1356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 10:52:09.789  INFO 1356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 10:52:10.127  INFO 1356 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 10:52:10.578  INFO 1356 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 10:52:10.639  INFO 1356 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 10:52:10.643  INFO 1356 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 10:52:10.644  WARN 1356 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 10:52:10.650  INFO 1356 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 10:52:10.721  INFO 1356 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 10:52:10.752  INFO 1356 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 10:52:10.853  INFO 1356 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 10:52:10.946  INFO 1356 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 10:52:11.385  INFO 1356 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-08 10:52:11.392  INFO 1356 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 10:52:11.751  WARN 1356 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 10:52:12.241  INFO 1356 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e8c741c, org.springframework.security.web.context.SecurityContextPersistenceFilter@24673720, org.springframework.security.web.header.HeaderWriterFilter@12dd3501, org.springframework.security.web.authentication.logout.LogoutFilter@756b703d, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@27260f9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@704ddfad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b8d1537, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60f70c9e, org.springframework.security.web.session.SessionManagementFilter@5e609b42, org.springframework.security.web.access.ExceptionTranslationFilter@46374b8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74e111a8]
+2021-11-08 10:52:12.489  INFO 1356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-08 10:52:12.993  INFO 1356 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 5.375 seconds (JVM running for 6.21)
+2021-11-08 10:52:17.503  INFO 1356 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 10:52:17.506  INFO 1356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 10:52:17.512  INFO 1356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
