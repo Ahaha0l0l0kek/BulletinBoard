@@ -32,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/setAdmin/**", "/post/boost/*", "/post/delete/*").hasRole("ADMIN")
+                .antMatchers("/setAdmin/**", "/post/boost/*", "/post/delete/*", "/chat/**").hasRole("ADMIN")
                 .antMatchers("/profile/edit/", "/profile/posts", "/profile/*/setRating",
                         "/post/*/edit", "/post/all", "/post/deleteMy/*", "/post/create", "/post/search",
                         "/post/*/chat/create", "/post/*/comment", "/post/category/*",

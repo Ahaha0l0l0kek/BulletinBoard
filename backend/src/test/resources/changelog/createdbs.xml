@@ -35,7 +35,7 @@
             create table users
             (
             id bigserial primary key,
-            login varchar not null,
+            login unique varchar not null,
             password varchar not null,
             firstname varchar not null,
             lastname varchar not null,
@@ -84,7 +84,7 @@
 
     <changeSet id="create_table_messages" author="alexey">
         <sql>
-            create type role as enum ('seller', 'buyer');
+            create type role as enum ('SELLER', 'BUYER');
 
             create table messages
             (

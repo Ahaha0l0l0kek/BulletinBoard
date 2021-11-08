@@ -15,7 +15,7 @@ create table categories
 create table users
 (
 	id bigserial primary key,
-	login varchar not null,
+	login varchar unique not null,
 	password varchar not null,
 	firstname varchar not null,
 	lastname varchar not null,
@@ -44,7 +44,7 @@ create table chats
 	foreign key (buyer_id) references users_chat (user_id) on delete cascade
 );
 
-create type role as enum ('seller', 'buyer');
+create type role as enum ('SELLER', 'BUYER');
 
 create table messages
 (

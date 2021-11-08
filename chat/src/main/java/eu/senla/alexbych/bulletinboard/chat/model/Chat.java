@@ -25,6 +25,6 @@ public class Chat {
     private ChatUser buyer;
 
     @Transient
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Message> messages;
 }

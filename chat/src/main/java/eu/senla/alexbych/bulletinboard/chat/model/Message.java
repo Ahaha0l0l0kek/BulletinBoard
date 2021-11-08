@@ -26,6 +26,6 @@ public class Message {
     @Column(name = "time_of_message")
     private LocalDateTime timeOfMessage;
 
-    @JoinColumn(name = "chat_id")
+    @Column(name = "chat_id")
     private long chatId;
 }

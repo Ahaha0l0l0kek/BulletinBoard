@@ -32,3 +32,663 @@
 2021-11-08 10:52:17.503  INFO 1356 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-11-08 10:52:17.506  INFO 1356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-11-08 10:52:17.512  INFO 1356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 12:19:46.720  INFO 20556 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 20556 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 12:19:46.724  INFO 20556 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 12:19:47.722  INFO 20556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 12:19:47.808  INFO 20556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 8 JPA repository interfaces.
+2021-11-08 12:19:48.557  INFO 20556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 12:19:48.565  INFO 20556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 12:19:48.565  INFO 20556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 12:19:48.684  INFO 20556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 12:19:48.684  INFO 20556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1896 ms
+2021-11-08 12:19:48.791  INFO 20556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 12:19:48.958  INFO 20556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 12:19:49.391  INFO 20556 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 12:19:49.922  INFO 20556 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 12:19:49.955  INFO 20556 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 12:19:49.959  INFO 20556 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 12:19:49.960  WARN 20556 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 12:19:49.966  INFO 20556 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 12:19:50.070  INFO 20556 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 12:19:50.114  INFO 20556 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 12:19:50.263  INFO 20556 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 12:19:50.349  INFO 20556 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 12:19:50.862  INFO 20556 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-08 12:19:50.869  INFO 20556 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 12:19:51.252  WARN 20556 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 12:19:51.793  INFO 20556 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20bc3e7f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a10e65b, org.springframework.security.web.header.HeaderWriterFilter@17af9f67, org.springframework.security.web.authentication.logout.LogoutFilter@3509f32d, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@16160a37, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a791e8b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5fe19d0e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7959fbe3, org.springframework.security.web.session.SessionManagementFilter@4cb0e39e, org.springframework.security.web.access.ExceptionTranslationFilter@57e35236, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64547a83]
+2021-11-08 12:19:52.051  INFO 20556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-08 12:19:52.593  INFO 20556 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 6.462 seconds (JVM running for 7.451)
+2021-11-08 12:25:01.128  INFO 20556 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-08 12:25:01.128  INFO 20556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-08 12:25:01.130  INFO 20556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-11-08 12:25:01.158  INFO 20556 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:25:01.426  INFO 20556 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:25:01.464  INFO 20556 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:25:09.099  INFO 20556 --- [http-nio-8080-exec-3] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:25:09.101  INFO 20556 --- [http-nio-8080-exec-3] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:25:09.107  INFO 20556 --- [http-nio-8080-exec-3] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:25:16.725  INFO 20556 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:25:16.741  INFO 20556 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:25:17.010  WARN 20556 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23502
+2021-11-08 12:25:17.011 ERROR 20556 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: значение NULL в столбце "password" отношения "users" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (1, superman, null, super, man, 33333333333, 0, 2).
+2021-11-08 12:26:33.306  INFO 20556 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 12:26:33.310  INFO 20556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 12:26:33.317  INFO 20556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 12:26:39.918  INFO 15372 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 15372 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 12:26:39.923  INFO 15372 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 12:26:41.055  INFO 15372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 12:26:41.186  INFO 15372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 8 JPA repository interfaces.
+2021-11-08 12:26:42.161  INFO 15372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 12:26:42.171  INFO 15372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 12:26:42.171  INFO 15372 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 12:26:42.318  INFO 15372 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 12:26:42.318  INFO 15372 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2333 ms
+2021-11-08 12:26:42.428  INFO 15372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 12:26:42.642  INFO 15372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 12:26:43.034  INFO 15372 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 12:26:43.481  INFO 15372 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 12:26:43.517  INFO 15372 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 12:26:43.521  INFO 15372 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 12:26:43.522  WARN 15372 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 12:26:43.532  INFO 15372 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 12:26:43.604  INFO 15372 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 12:26:43.639  INFO 15372 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 12:26:43.739  INFO 15372 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 12:26:43.815  INFO 15372 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 12:26:44.286  INFO 15372 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-08 12:26:44.294  INFO 15372 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 12:26:44.662  WARN 15372 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 12:26:45.135  INFO 15372 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@633dce39, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e609b42, org.springframework.security.web.header.HeaderWriterFilter@f14d079, org.springframework.security.web.authentication.logout.LogoutFilter@c725dfa, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@35d4fecf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24673720, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@96271d8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4dd28982, org.springframework.security.web.session.SessionManagementFilter@3619bc9e, org.springframework.security.web.access.ExceptionTranslationFilter@490dfe25, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3dfe520]
+2021-11-08 12:26:45.401  INFO 15372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-08 12:26:45.880  INFO 15372 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 6.526 seconds (JVM running for 7.476)
+2021-11-08 12:34:13.285  INFO 15372 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-08 12:34:13.285  INFO 15372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-08 12:34:13.289  INFO 15372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-11-08 12:34:13.315  INFO 15372 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:34:13.327  INFO 15372 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:34:13.705  WARN 15372 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2021-11-08 12:34:13.705 ERROR 15372 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+2021-11-08 12:34:24.516  INFO 15372 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:34:24.518  INFO 15372 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:34:24.701  WARN 15372 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2021-11-08 12:34:24.701 ERROR 15372 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_pkey"
+  Подробности: Ключ "(id)=(3)" уже существует.
+2021-11-08 12:34:25.459  INFO 15372 --- [http-nio-8080-exec-6] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:34:25.461  INFO 15372 --- [http-nio-8080-exec-6] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:34:25.628  INFO 15372 --- [http-nio-8080-exec-6] e.s.a.b.backend.service.UserService      : Created user UserDTO(id=0, login=superman, password=$2a$10$xMbkeKvtSL970dOCxG/e/eg.jEWwef4Hvz7bxQ8mIXC4UHT7Iktzm, rating=0.0, firstname=super, lastname=man, phoneNumber=33333333333, role=eu.senla.alexbych.bulletinboard.backend.model.Role@465c7ab7, posts=null, ratings=null)
+2021-11-08 12:34:26.486  INFO 15372 --- [http-nio-8080-exec-7] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:34:26.488  INFO 15372 --- [http-nio-8080-exec-7] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:34:26.642  INFO 15372 --- [http-nio-8080-exec-7] e.s.a.b.backend.service.UserService      : Created user UserDTO(id=0, login=superman, password=$2a$10$MICSMwjrvK8f6H1kGWqRuOXBan7JbU5yJnIeSlmZnVgA7xSKBPgn2, rating=0.0, firstname=super, lastname=man, phoneNumber=33333333333, role=eu.senla.alexbych.bulletinboard.backend.model.Role@3b409cf6, posts=null, ratings=null)
+2021-11-08 12:38:29.383  INFO 15372 --- [http-nio-8080-exec-10] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:38:29.385  INFO 15372 --- [http-nio-8080-exec-10] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:38:45.246  INFO 15372 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:38:45.248  INFO 15372 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:38:51.307  INFO 15372 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:38:51.309  INFO 15372 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:38:52.331  INFO 15372 --- [http-nio-8080-exec-6] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:38:52.333  INFO 15372 --- [http-nio-8080-exec-6] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:39:54.768  INFO 15372 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 12:39:54.772  INFO 15372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 12:39:54.778  INFO 15372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 12:47:16.780  INFO 29236 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 29236 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 12:47:16.784  INFO 29236 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 12:47:17.869  INFO 29236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 12:47:17.989  INFO 29236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 8 JPA repository interfaces.
+2021-11-08 12:47:19.100  INFO 29236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 12:47:19.109  INFO 29236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 12:47:19.109  INFO 29236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 12:47:19.273  INFO 29236 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 12:47:19.274  INFO 29236 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2435 ms
+2021-11-08 12:47:19.399  INFO 29236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 12:47:19.581  INFO 29236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 12:47:19.951  INFO 29236 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 12:47:20.372  INFO 29236 --- [main] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
+2021-11-08 12:47:20.378  INFO 29236 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 12:47:20.399  INFO 29236 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 12:47:20.403  INFO 29236 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 12:47:20.405  WARN 29236 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 12:47:20.419  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.420  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::create_table_roles::alexey ran successfully in 12ms
+2021-11-08 12:47:20.434  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.434  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::create_table_categories::alexey ran successfully in 9ms
+2021-11-08 12:47:20.452  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.453  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::create_table_users::alexey ran successfully in 17ms
+2021-11-08 12:47:20.461  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.463  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::create_table_users_chat::alexey ran successfully in 9ms
+2021-11-08 12:47:20.474  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.475  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::create_table_chats::alexey ran successfully in 10ms
+2021-11-08 12:47:20.488  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.488  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::create_table_messages::alexey ran successfully in 11ms
+2021-11-08 12:47:20.575  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.576  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::create_table_posts::alexey ran successfully in 85ms
+2021-11-08 12:47:20.597  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.599  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::create_table_comments::alexey ran successfully in 20ms
+2021-11-08 12:47:20.613  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.614  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::create_table_ratings::alexey ran successfully in 13ms
+2021-11-08 12:47:20.621  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.622  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::insert_values_into_roles::alexey ran successfully in 5ms
+2021-11-08 12:47:20.629  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.630  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::insert_values_into_categories::alexey ran successfully in 5ms
+2021-11-08 12:47:20.640  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.641  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::insert_values_into_users::alexey ran successfully in 7ms
+2021-11-08 12:47:20.645  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.646  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::insert_values_into_users_chat::alexey ran successfully in 3ms
+2021-11-08 12:47:20.651  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.651  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::insert_values_into_chats::alexey ran successfully in 3ms
+2021-11-08 12:47:20.657  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.658  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::insert_values_into_messages::alexey ran successfully in 5ms
+2021-11-08 12:47:20.667  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.668  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::insert_values_into_posts::alexey ran successfully in 8ms
+2021-11-08 12:47:20.673  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.674  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::insert_values_into_comments::alexey ran successfully in 5ms
+2021-11-08 12:47:20.678  INFO 29236 --- [main] liquibase.changelog                      : Custom SQL executed
+2021-11-08 12:47:20.679  INFO 29236 --- [main] liquibase.changelog                      : ChangeSet db/changelog/createdbs.xml::insert_values_into_ratings::alexey ran successfully in 4ms
+2021-11-08 12:47:20.682  INFO 29236 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 12:47:20.789  INFO 29236 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 12:47:20.841  INFO 29236 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 12:47:20.966  INFO 29236 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 12:47:21.051  INFO 29236 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 12:47:21.516  INFO 29236 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-08 12:47:21.534  INFO 29236 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 12:47:21.920  WARN 29236 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 12:47:22.503  INFO 29236 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a47a011, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ea91c39, org.springframework.security.web.header.HeaderWriterFilter@4a0a93ce, org.springframework.security.web.authentication.logout.LogoutFilter@18206382, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@7860a014, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12ef7db5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@116fe252, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6441da2c, org.springframework.security.web.session.SessionManagementFilter@54626326, org.springframework.security.web.access.ExceptionTranslationFilter@7b8d1537, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56dae6]
+2021-11-08 12:47:22.817  INFO 29236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-08 12:47:23.288  INFO 29236 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 7.039 seconds (JVM running for 7.986)
+2021-11-08 12:47:54.511  INFO 29236 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-08 12:47:54.511  INFO 29236 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-08 12:47:54.515  INFO 29236 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-11-08 12:47:54.546  INFO 29236 --- [http-nio-8080-exec-2] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:47:54.561  INFO 29236 --- [http-nio-8080-exec-2] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:47:55.052  WARN 29236 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2021-11-08 12:47:55.052 ERROR 29236 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_pkey"
+  Подробности: Ключ "(id)=(1)" уже существует.
+2021-11-08 12:47:56.307  INFO 29236 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:47:56.308  INFO 29236 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:47:56.460  WARN 29236 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2021-11-08 12:47:56.460 ERROR 29236 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+2021-11-08 12:47:57.192  INFO 29236 --- [http-nio-8080-exec-6] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:47:57.192  INFO 29236 --- [http-nio-8080-exec-6] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:47:57.311  WARN 29236 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2021-11-08 12:47:57.311 ERROR 29236 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_pkey"
+  Подробности: Ключ "(id)=(3)" уже существует.
+2021-11-08 12:47:58.033  INFO 29236 --- [http-nio-8080-exec-8] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:47:58.034  INFO 29236 --- [http-nio-8080-exec-8] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:47:58.199  INFO 29236 --- [http-nio-8080-exec-8] e.s.a.b.backend.service.UserService      : Created user UserDTO(id=0, login=superman, password=$2a$10$GkjR6dWG97Bdgvq2ebZpPOjuj8eZviQThFpsRPPDokhFQ3k8Z9.dC, rating=0.0, firstname=super, lastname=man, phoneNumber=33333333333, role=eu.senla.alexbych.bulletinboard.backend.model.Role@2e4810d2, posts=null, ratings=null)
+2021-11-08 12:48:12.405  INFO 29236 --- [http-nio-8080-exec-9] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:48:12.406  INFO 29236 --- [http-nio-8080-exec-9] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:48:29.593  INFO 29236 --- [http-nio-8080-exec-10] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:48:29.594  INFO 29236 --- [http-nio-8080-exec-10] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:49:53.971  INFO 29236 --- [http-nio-8080-exec-3] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:49:54.021  INFO 29236 --- [http-nio-8080-exec-3] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:49:54.054  INFO 29236 --- [http-nio-8080-exec-3] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:50:20.206  INFO 29236 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:50:20.215  INFO 29236 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:50:20.224  INFO 29236 --- [http-nio-8080-exec-4] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:51:18.588  INFO 29236 --- [http-nio-8080-exec-5] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:51:18.599  INFO 29236 --- [http-nio-8080-exec-5] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:51:58.869  INFO 29236 --- [http-nio-8080-exec-6] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:51:58.878  INFO 29236 --- [http-nio-8080-exec-6] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:52:14.836  INFO 29236 --- [http-nio-8080-exec-7] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:52:14.869  INFO 29236 --- [http-nio-8080-exec-7] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:53:06.538  INFO 29236 --- [http-nio-8080-exec-8] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:53:06.547  INFO 29236 --- [http-nio-8080-exec-8] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:53:06.560  INFO 29236 --- [http-nio-8080-exec-8] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:53:09.015  INFO 29236 --- [http-nio-8080-exec-9] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:53:09.027  INFO 29236 --- [http-nio-8080-exec-9] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:53:09.037  INFO 29236 --- [http-nio-8080-exec-9] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:53:25.587  INFO 29236 --- [http-nio-8080-exec-10] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:53:25.601  INFO 29236 --- [http-nio-8080-exec-10] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 12:53:25.711  INFO 29236 --- [http-nio-8080-exec-10] e.s.a.b.backend.service.PostService      : Received posts : [PostDTO(id=1, title=sofa, price=2300.0, picture=sofa.png, description=super sofa, very soft, postTime=2020-01-01T00:00, priority=false, active=true, categoryId=1, user=eu.senla.alexbych.bulletinboard.backend.model.User@15e2ff58, comments=[eu.senla.alexbych.bulletinboard.backend.model.Comment@69784fae, eu.senla.alexbych.bulletinboard.backend.model.Comment@65af9710])]
+2021-11-08 13:01:56.281  INFO 29236 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:01:56.286  INFO 29236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 13:01:56.294  INFO 29236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 13:02:04.423  INFO 15564 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 15564 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 13:02:04.427  INFO 15564 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 13:02:05.561  INFO 15564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 13:02:05.698  INFO 15564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125 ms. Found 8 JPA repository interfaces.
+2021-11-08 13:02:06.559  INFO 15564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 13:02:06.569  INFO 15564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 13:02:06.570  INFO 15564 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 13:02:06.689  INFO 15564 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 13:02:06.689  INFO 15564 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2198 ms
+2021-11-08 13:02:06.832  INFO 15564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 13:02:07.066  INFO 15564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 13:02:07.541  INFO 15564 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:02:08.046  INFO 15564 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 13:02:08.099  INFO 15564 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:02:08.106  INFO 15564 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:02:08.108  WARN 15564 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 13:02:08.117  INFO 15564 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:02:08.258  INFO 15564 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 13:02:08.361  INFO 15564 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 13:02:08.645  INFO 15564 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 13:02:08.830  INFO 15564 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 13:02:09.461  INFO 15564 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-08 13:02:09.483  INFO 15564 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:02:10.177  WARN 15564 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 13:02:10.786  INFO 15564 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39329d81, org.springframework.security.web.context.SecurityContextPersistenceFilter@d0456ad, org.springframework.security.web.header.HeaderWriterFilter@57e35236, org.springframework.security.web.authentication.logout.LogoutFilter@4dfbe8c2, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@17b9c9ff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4cb0e39e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@622c658d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63574d76, org.springframework.security.web.session.SessionManagementFilter@29ceefb3, org.springframework.security.web.access.ExceptionTranslationFilter@309ac89e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2afa1b1a]
+2021-11-08 13:02:11.053  INFO 15564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-08 13:02:11.916  INFO 15564 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 8.033 seconds (JVM running for 9.143)
+2021-11-08 13:02:30.776  INFO 15564 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-08 13:02:30.777  INFO 15564 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-08 13:02:30.782  INFO 15564 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-11-08 13:02:30.811  INFO 15564 --- [http-nio-8080-exec-2] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:02:31.112  INFO 15564 --- [http-nio-8080-exec-2] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:04:36.788  INFO 15564 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:04:36.792  INFO 15564 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 13:04:36.801  INFO 15564 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 13:04:43.159  INFO 21444 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 21444 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 13:04:43.162  INFO 21444 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 13:04:44.203  INFO 21444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 13:04:44.306  INFO 21444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 8 JPA repository interfaces.
+2021-11-08 13:04:45.014  INFO 21444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 13:04:45.021  INFO 21444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 13:04:45.022  INFO 21444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 13:04:45.151  INFO 21444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 13:04:45.152  INFO 21444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1939 ms
+2021-11-08 13:04:45.242  INFO 21444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 13:04:45.476  INFO 21444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 13:04:45.840  INFO 21444 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:04:46.247  INFO 21444 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 13:04:46.273  INFO 21444 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:04:46.277  INFO 21444 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:04:46.278  WARN 21444 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 13:04:46.284  INFO 21444 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:04:46.353  INFO 21444 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 13:04:46.383  INFO 21444 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 13:04:46.510  INFO 21444 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 13:04:46.583  INFO 21444 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 13:04:47.136  INFO 21444 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-08 13:04:47.143  INFO 21444 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:04:47.517  WARN 21444 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 13:04:48.012  INFO 21444 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7640a191, org.springframework.security.web.context.SecurityContextPersistenceFilter@592fbd8, org.springframework.security.web.header.HeaderWriterFilter@721f3526, org.springframework.security.web.authentication.logout.LogoutFilter@11eb8842, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@7bbc11ed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30be6a05, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b3e2039, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@504a9352, org.springframework.security.web.session.SessionManagementFilter@e417628, org.springframework.security.web.access.ExceptionTranslationFilter@6e2764c9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5fdebe73]
+2021-11-08 13:04:48.252  INFO 21444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-08 13:04:48.788  INFO 21444 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 6.132 seconds (JVM running for 6.954)
+2021-11-08 13:04:54.183  INFO 21444 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-08 13:04:54.184  INFO 21444 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-08 13:04:54.187  INFO 21444 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-11-08 13:04:54.220  INFO 21444 --- [http-nio-8080-exec-2] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:04:54.527  INFO 21444 --- [http-nio-8080-exec-2] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:04:54.652  WARN 21444 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
+2021-11-08 13:04:54.653 ERROR 21444 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: отношение "chats_messages" не существует
+  Позиция: 287
+2021-11-08 13:05:58.513  INFO 21444 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:05:58.519  INFO 21444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 13:05:58.525  INFO 21444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 13:06:04.737  INFO 8560 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 8560 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 13:06:04.740  INFO 8560 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 13:06:05.923  INFO 8560 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 13:06:06.015  INFO 8560 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 8 JPA repository interfaces.
+2021-11-08 13:06:06.897  INFO 8560 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 13:06:06.909  INFO 8560 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 13:06:06.910  INFO 8560 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 13:06:07.038  INFO 8560 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 13:06:07.039  INFO 8560 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2238 ms
+2021-11-08 13:06:07.151  INFO 8560 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 13:06:07.413  INFO 8560 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 13:06:07.770  INFO 8560 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:06:08.294  INFO 8560 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 13:06:08.330  INFO 8560 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:06:08.336  INFO 8560 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:06:08.337  WARN 8560 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 13:06:08.349  INFO 8560 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:06:08.474  INFO 8560 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 13:06:08.539  INFO 8560 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 13:06:08.743  INFO 8560 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 13:06:08.899  INFO 8560 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 13:06:09.103 ERROR 8560 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Table [messages] contains physical column name [chat_id] referred to by multiple logical column names: [chat_id], [chatId]
+2021-11-08 13:06:09.107 ERROR 8560 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtFilter': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes\eu\senla\alexbych\bulletinboard\backend\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in eu.senla.alexbych.bulletinboard.backend.repository.UserRepository defined in @EnableJpaRepositories declared on JpaConfig: Cannot create inner bean '(inner bean)#5b2b8d86' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#5b2b8d86': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Table [messages] contains physical column name [chat_id] referred to by multiple logical column names: [chat_id], [chatId]
+2021-11-08 13:06:09.125  INFO 8560 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-08 13:06:09.129  WARN 8560 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@15.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@15.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@15.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1661)
+ java.base@15.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@15.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@15.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1056)
+ java.base@15.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1116)
+ java.base@15.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+ java.base@15.0.2/java.lang.Thread.run(Thread.java:832)
+2021-11-08 13:06:09.129  WARN 8560 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@15.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@15.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@15.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1661)
+ java.base@15.0.2/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+ java.base@15.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1055)
+ java.base@15.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1116)
+ java.base@15.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+ java.base@15.0.2/java.lang.Thread.run(Thread.java:832)
+2021-11-08 13:06:09.131  WARN 8560 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-08 13:06:09.131  INFO 8560 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 13:06:09.135  INFO 8560 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 13:06:09.148  INFO 8560 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-08 13:06:09.173 ERROR 8560 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.5.jar:2.5.5]
+	at eu.senla.alexbych.bulletinboard.backend.BulletinBoardApplication.main(BulletinBoardApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160) ~[spring-boot-2.5.5.jar:2.5.5]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtFilter': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes\eu\senla\alexbych\bulletinboard\backend\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in eu.senla.alexbych.bulletinboard.backend.repository.UserRepository defined in @EnableJpaRepositories declared on JpaConfig: Cannot create inner bean '(inner bean)#5b2b8d86' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#5b2b8d86': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Table [messages] contains physical column name [chat_id] referred to by multiple logical column names: [chat_id], [chatId]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:260) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:234) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.5.5.jar:2.5.5]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes\eu\senla\alexbych\bulletinboard\backend\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in eu.senla.alexbych.bulletinboard.backend.repository.UserRepository defined in @EnableJpaRepositories declared on JpaConfig: Cannot create inner bean '(inner bean)#5b2b8d86' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#5b2b8d86': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Table [messages] contains physical column name [chat_id] referred to by multiple logical column names: [chat_id], [chatId]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 55 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in eu.senla.alexbych.bulletinboard.backend.repository.UserRepository defined in @EnableJpaRepositories declared on JpaConfig: Cannot create inner bean '(inner bean)#5b2b8d86' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#5b2b8d86': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Table [messages] contains physical column name [chat_id] referred to by multiple logical column names: [chat_id], [chatId]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:389) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:134) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1689) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1434) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 68 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#5b2b8d86': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Table [messages] contains physical column name [chat_id] referred to by multiple logical column names: [chat_id], [chatId]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:510) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:374) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 82 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Table [messages] contains physical column name [chat_id] referred to by multiple logical column names: [chat_id], [chatId]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 90 common frames omitted
+Caused by: org.hibernate.DuplicateMappingException: Table [messages] contains physical column name [chat_id] referred to by multiple logical column names: [chat_id], [chatId]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl$TableColumnNameBinding.bindPhysicalToLogical(InFlightMetadataCollectorImpl.java:940) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl$TableColumnNameBinding.addBinding(InFlightMetadataCollectorImpl.java:909) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.addColumnNameBinding(InFlightMetadataCollectorImpl.java:979) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.addColumnNameBinding(InFlightMetadataCollectorImpl.java:960) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.cfg.Ejb3JoinColumn.addColumnBinding(Ejb3JoinColumn.java:788) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.cfg.Ejb3Column.linkWithValue(Ejb3Column.java:371) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.cfg.Ejb3JoinColumn.linkValueUsingDefaultColumnNaming(Ejb3JoinColumn.java:482) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.cfg.annotations.TableBinder.bindFk(TableBinder.java:592) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:105) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1823) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1767) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1655) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 97 common frames omitted
+
+2021-11-08 13:12:33.448  INFO 9752 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 9752 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 13:12:33.451  INFO 9752 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 13:12:34.742  INFO 9752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 13:12:34.862  INFO 9752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 8 JPA repository interfaces.
+2021-11-08 13:12:35.909  INFO 9752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 13:12:35.918  INFO 9752 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 13:12:35.919  INFO 9752 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 13:12:36.032  INFO 9752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 13:12:36.033  INFO 9752 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2526 ms
+2021-11-08 13:12:36.158  INFO 9752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 13:12:36.374  INFO 9752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 13:12:36.730  INFO 9752 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:12:37.182  INFO 9752 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 13:12:37.214  INFO 9752 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:12:37.221  INFO 9752 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:12:37.222  WARN 9752 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 13:12:37.231  INFO 9752 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:12:37.343  INFO 9752 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 13:12:37.396  INFO 9752 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 13:12:37.558  INFO 9752 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 13:12:37.708  INFO 9752 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 13:12:38.391  INFO 9752 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-08 13:12:38.398  INFO 9752 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:12:38.914  WARN 9752 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 13:12:39.517  INFO 9752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d21a69f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f0381cd, org.springframework.security.web.header.HeaderWriterFilter@2b3e2039, org.springframework.security.web.authentication.logout.LogoutFilter@6441da2c, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@488c608a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@633dce39, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e866323, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10b063fd, org.springframework.security.web.session.SessionManagementFilter@7aecff85, org.springframework.security.web.access.ExceptionTranslationFilter@30fffb53, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@719e8f9f]
+2021-11-08 13:12:39.780  INFO 9752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-08 13:12:40.253  INFO 9752 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 7.293 seconds (JVM running for 8.148)
+2021-11-08 13:12:47.370  INFO 9752 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-08 13:12:47.371  INFO 9752 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-08 13:12:47.372  INFO 9752 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-11-08 13:12:47.390  INFO 9752 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:12:47.561  INFO 9752 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:12:47.655  WARN 9752 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
+2021-11-08 13:12:47.655 ERROR 9752 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: отношение "chats_messages" не существует
+  Позиция: 517
+2021-11-08 13:15:22.385  INFO 9752 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:15:22.389  INFO 9752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 13:15:22.393  INFO 9752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 13:15:28.785  INFO 28768 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 28768 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 13:15:28.787  INFO 28768 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 13:15:29.523  INFO 28768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 13:15:29.597  INFO 28768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 8 JPA repository interfaces.
+2021-11-08 13:15:30.421  INFO 28768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 13:15:30.427  INFO 28768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 13:15:30.427  INFO 28768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 13:15:30.545  INFO 28768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 13:15:30.545  INFO 28768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1719 ms
+2021-11-08 13:15:30.652  INFO 28768 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 13:15:30.800  INFO 28768 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 13:15:31.206  INFO 28768 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:15:31.693  INFO 28768 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 13:15:31.720  INFO 28768 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:15:31.724  INFO 28768 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:15:31.724  WARN 28768 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 13:15:31.731  INFO 28768 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:15:31.825  INFO 28768 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 13:15:31.874  INFO 28768 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 13:15:32.018  INFO 28768 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 13:15:32.104  INFO 28768 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 13:15:32.855  INFO 28768 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-08 13:15:32.874  INFO 28768 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:15:33.541  WARN 28768 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 13:15:34.154  INFO 28768 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e8c9083, org.springframework.security.web.context.SecurityContextPersistenceFilter@490dfe25, org.springframework.security.web.header.HeaderWriterFilter@b91e024, org.springframework.security.web.authentication.logout.LogoutFilter@593d0173, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@29280ca6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46374b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c4a1980, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64547a83, org.springframework.security.web.session.SessionManagementFilter@7ec01440, org.springframework.security.web.access.ExceptionTranslationFilter@5a02fca5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@30be6a05]
+2021-11-08 13:15:34.613  INFO 28768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-08 13:15:35.139  INFO 28768 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 6.794 seconds (JVM running for 7.622)
+2021-11-08 13:15:41.778  INFO 28768 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-08 13:15:41.780  INFO 28768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-08 13:15:41.783  INFO 28768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-11-08 13:15:41.810  INFO 28768 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:15:42.020  INFO 28768 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:23:11.027  INFO 28768 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:23:11.029  INFO 28768 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 13:23:11.036  INFO 28768 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 13:23:17.487  INFO 2360 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 2360 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 13:23:17.490  INFO 2360 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 13:23:18.559  INFO 2360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 13:23:18.688  INFO 2360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 9 JPA repository interfaces.
+2021-11-08 13:23:19.713  INFO 2360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 13:23:19.720  INFO 2360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 13:23:19.720  INFO 2360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 13:23:19.828  INFO 2360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 13:23:19.829  INFO 2360 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2278 ms
+2021-11-08 13:23:19.920  INFO 2360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 13:23:20.291  INFO 2360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 13:23:20.637  INFO 2360 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:23:21.096  INFO 2360 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 13:23:21.139  INFO 2360 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:23:21.145  INFO 2360 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:23:21.146  WARN 2360 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 13:23:21.155  INFO 2360 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:23:21.238  INFO 2360 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 13:23:21.270  INFO 2360 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 13:23:21.388  INFO 2360 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 13:23:21.466  INFO 2360 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 13:23:21.984  INFO 2360 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-08 13:23:21.992  INFO 2360 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:23:22.332  WARN 2360 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 13:23:22.897  INFO 2360 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@597084b7, org.springframework.security.web.context.SecurityContextPersistenceFilter@30fffb53, org.springframework.security.web.header.HeaderWriterFilter@41c05747, org.springframework.security.web.authentication.logout.LogoutFilter@5c168f98, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@7fd3c38b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e8c9083, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7959fbe3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59ebe484, org.springframework.security.web.session.SessionManagementFilter@51179fad, org.springframework.security.web.access.ExceptionTranslationFilter@5cbf9aee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@504a9352]
+2021-11-08 13:23:23.200  INFO 2360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-08 13:23:23.701  INFO 2360 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 6.754 seconds (JVM running for 7.664)
+2021-11-08 13:23:29.313  INFO 2360 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-08 13:23:29.314  INFO 2360 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-08 13:23:29.318  INFO 2360 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-11-08 13:23:29.342  INFO 2360 --- [http-nio-8080-exec-2] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:23:29.543  INFO 2360 --- [http-nio-8080-exec-2] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:23:35.710  INFO 2360 --- [http-nio-8080-exec-3] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:23:35.721  INFO 2360 --- [http-nio-8080-exec-3] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:24:33.048  INFO 2360 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:24:33.052  INFO 2360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 13:24:33.060  INFO 2360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 13:24:38.957  INFO 29016 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 29016 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 13:24:38.960  INFO 29016 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 13:24:40.295  INFO 29016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 13:24:40.446  INFO 29016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 9 JPA repository interfaces.
+2021-11-08 13:24:41.316  INFO 29016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 13:24:41.322  INFO 29016 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 13:24:41.323  INFO 29016 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 13:24:41.453  INFO 29016 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 13:24:41.453  INFO 29016 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2433 ms
+2021-11-08 13:24:41.545  INFO 29016 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 13:24:41.680  INFO 29016 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 13:24:42.057  INFO 29016 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:24:42.633  INFO 29016 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 13:24:42.699  INFO 29016 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:24:42.705  INFO 29016 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:24:42.706  WARN 29016 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 13:24:42.720  INFO 29016 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:24:42.852  INFO 29016 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 13:24:42.886  INFO 29016 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 13:24:42.985  INFO 29016 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 13:24:43.052  INFO 29016 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 13:24:43.564  INFO 29016 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-08 13:24:43.571  INFO 29016 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:24:44.058  WARN 29016 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 13:24:44.629  INFO 29016 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a6fc2e1, org.springframework.security.web.context.SecurityContextPersistenceFilter@63574d76, org.springframework.security.web.header.HeaderWriterFilter@592fbd8, org.springframework.security.web.authentication.logout.LogoutFilter@f6b128b, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@1c0a4f87, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@dcf64d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f0381cd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c7008b4, org.springframework.security.web.session.SessionManagementFilter@7ef570be, org.springframework.security.web.access.ExceptionTranslationFilter@ba90170, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@597084b7]
+2021-11-08 13:24:45.167  INFO 29016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-08 13:24:45.863  INFO 29016 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 7.48 seconds (JVM running for 8.361)
+2021-11-08 13:24:52.265  INFO 29016 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-08 13:24:52.266  INFO 29016 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-08 13:24:52.272  INFO 29016 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-11-08 13:24:52.294  INFO 29016 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:24:52.574  INFO 29016 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:25:46.933  INFO 29016 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:25:46.940  INFO 29016 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 13:25:46.952  INFO 29016 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 13:25:53.149  INFO 15916 --- [main] e.s.a.b.b.BulletinBoardApplication       : Starting BulletinBoardApplication using Java 15.0.2 on DESKTOP-MK8V2HK with PID 15916 (C:\Users\Axelerator\Desktop\final\BulletinBoard\backend\target\classes started by Axelerator in C:\Users\Axelerator\Desktop\final\BulletinBoard)
+2021-11-08 13:25:53.152  INFO 15916 --- [main] e.s.a.b.b.BulletinBoardApplication       : No active profile set, falling back to default profiles: default
+2021-11-08 13:25:54.218  INFO 15916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-08 13:25:54.319  INFO 15916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 9 JPA repository interfaces.
+2021-11-08 13:25:55.201  INFO 15916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-08 13:25:55.211  INFO 15916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-08 13:25:55.211  INFO 15916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-08 13:25:55.350  INFO 15916 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-08 13:25:55.351  INFO 15916 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2143 ms
+2021-11-08 13:25:55.463  INFO 15916 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 13:25:55.671  INFO 15916 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 13:25:56.062  INFO 15916 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:25:56.474  INFO 15916 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2021-11-08 13:25:56.505  INFO 15916 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:25:56.509  INFO 15916 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2021-11-08 13:25:56.510  WARN 15916 --- [main] liquibase.hub                            : Skipping auto-registration
+2021-11-08 13:25:56.516  INFO 15916 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2021-11-08 13:25:56.588  INFO 15916 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-08 13:25:56.621  INFO 15916 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-08 13:25:56.747  INFO 15916 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-08 13:25:56.832  INFO 15916 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2021-11-08 13:25:57.287  INFO 15916 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-08 13:25:57.296  INFO 15916 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:25:57.668  WARN 15916 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 13:25:58.305  INFO 15916 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a0b925a, org.springframework.security.web.context.SecurityContextPersistenceFilter@487f025, org.springframework.security.web.header.HeaderWriterFilter@452ea8f0, org.springframework.security.web.authentication.logout.LogoutFilter@365fde74, eu.senla.alexbych.bulletinboard.backend.config.jwt.JwtFilter@bb160fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39329d81, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e6ec9c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14b4f462, org.springframework.security.web.session.SessionManagementFilter@64547a83, org.springframework.security.web.access.ExceptionTranslationFilter@64455184, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4458887d]
+2021-11-08 13:25:58.594  INFO 15916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-08 13:25:59.080  INFO 15916 --- [main] e.s.a.b.b.BulletinBoardApplication       : Started BulletinBoardApplication in 6.441 seconds (JVM running for 7.431)
+2021-11-08 13:26:01.361  INFO 15916 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-08 13:26:01.362  INFO 15916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-08 13:26:01.364  INFO 15916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-11-08 13:26:01.380  INFO 15916 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:26:01.541  INFO 15916 --- [http-nio-8080-exec-1] e.s.a.b.backend.config.jwt.JwtFilter     : do filter...
+2021-11-08 13:30:37.425  INFO 15916 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 13:30:37.429  INFO 15916 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 13:30:37.436  INFO 15916 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
