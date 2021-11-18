@@ -47,7 +47,7 @@ create table chats
 	foreign key (buyer_id) references users_chat (user_id) on delete cascade
 );
 
-create type role as enum ('seller', 'buyer');
+create type role as enum ('SELLER', 'BUYER');
 
 create table messages
 (
@@ -118,8 +118,8 @@ insert into users_chat values(3, 'Maria');
 
 insert into chats values(1, 3, 2);
 
-insert into messages values(1, 'buyer', 'prove original', '2021-11-11', 1);
-insert into messages values(2, 'seller', 'no', '2021-11-11', 1);
+insert into messages values(1, 'BUYER', 'prove original', '2021-11-11', 1);
+insert into messages values(2, 'SELLER', 'no', '2021-11-11', 1);
 
 insert into posts values(1, 'sofa', 2300, true, 'sofa.png', 'super sofa, very soft', '2020-01-01', 2, 1, false);
 insert into posts values(2, 'pants nike', 3000, true, 'pants_nike.png', 'new pants, XXL', '2020-07-11', 2, 2, true);

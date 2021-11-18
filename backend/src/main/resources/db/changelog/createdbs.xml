@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
 
     <changeSet id="create_table_roles" author="alexey">
-        <sql>
+   <sql>
             create table roles
             (
             id   bigserial    primary key,
@@ -217,8 +217,8 @@
 
     <changeSet id="insert_values_into_messages" author="alexey">
         <sql>
-            insert into messages values(1, 'buyer', 'prove original', '2021-11-11', 1);
-            insert into messages values(2, 'seller', 'no', '2021-11-11', 1);
+            insert into messages values(1, 'BUYER', 'prove original', '2021-11-11', 1);
+            insert into messages values(2, 'SELLER', 'no', '2021-11-11', 1);
         </sql>
         <rollback>
             delete from posts where id &lt; 3;

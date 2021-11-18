@@ -29,6 +29,7 @@
         <org.hibernate.version>7.0.0.Final</org.hibernate.version>
         <lombok.version>1.18.20</lombok.version>
         <io.springfox.version>3.0.0</io.springfox.version>
+        <wsdl4j.version>1.6.3</wsdl4j.version>
     </properties>
 
     <dependencyManagement>
@@ -89,6 +90,11 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-bean-validators</artifactId>
             <version>${io.springfox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>wsdl4j</groupId>
+            <artifactId>wsdl4j</artifactId>
+            <version>${wsdl4j.version}</version>
         </dependency>
     </dependencies>
     </dependencyManagement>
