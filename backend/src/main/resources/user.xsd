@@ -1,7 +1,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://senla.eu/alexbych/bulletinboard/backend/ws"
            targetNamespace="http://senla.eu/alexbych/bulletinboard/backend/ws" elementFormDefault="qualified">
 
-    <xs:element name="userDetailsRequest">
+    <xs:element name="UserDetailsRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="login" type="xs:string"/>
@@ -9,15 +9,15 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="userDetailsResponse">
+    <xs:element name="UserDetailsResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="User" type="tns:user"/>
+                <xs:element name="User" type="tns:User"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="user">
+    <xs:complexType name="User">
         <xs:sequence>
             <xs:element name="id" type="xs:long"/>
             <xs:element name="login" type="xs:string"/>
