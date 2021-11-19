@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:us="http://senla.eu/alexbych/bulletinboard/backend/ws">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <us:UserSOADetailsRequest>
+            <us:login>alex</us:login>
+        </us:UserSOADetailsRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

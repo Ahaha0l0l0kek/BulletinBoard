@@ -14,6 +14,7 @@ import eu.senla.alexbych.bulletinboard.backend.repository.UserRepository;
 import eu.senla.alexbych.bulletinboard.backend.utils.compatator.PostComparator;
 import eu.senla.alexbych.bulletinboard.backend.utils.converter.IPostConverter;
 import eu.senla.alexbych.bulletinboard.backend.utils.converter.IUserConverter;
+import eu.senla.alexbych.bulletinboard.backend.ws.UserSOA;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -142,5 +143,16 @@ public class UserService implements UserDetailsService {
         userRepository.updateRating(sum, id);
         log.info("User with id " + id + "rated " + sum);
         return true;
+    }
+
+    public UserSOA getUserSOA(String login){
+        User user = userRepository.findByLogin(login);
+        UserSOA userSOA = new UserSOA();
+        userSOA.setId(user.getId());
+        userSOA.setFirstname(user.getFirstname());
+        userSOA.setLastname(user.getLastname());
+        userSOA.setLogin(user.getLogin());
+        userSOA.setPhoneNumber(user.getPhoneNumber());
+        return userSOA;
     }
 }

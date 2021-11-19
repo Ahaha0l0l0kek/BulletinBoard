@@ -20,7 +20,7 @@ public class WsConfig extends WsConfigurerAdapter {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
         servlet.setApplicationContext(applicationContext);
         servlet.setTransformWsdlLocations(true);
-        return new ServletRegistrationBean(servlet, "/profile");
+        return new ServletRegistrationBean(servlet, "/profile/*");
     }
 
     @Bean(name = "userDetailsWsdl")
