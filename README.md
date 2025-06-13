@@ -1,9 +1,16 @@
-## Requirements
+## BulletinBoard
+
+A simplified marketplace platform, demonstrating skills in Backend, ML and DevOps.
+
+
+### Requirements
 - Java 15
+- Spring Boot
+- Python 3.10
 - PostgreSQL 12+
 - Docker
 
-## Build project
+### Build project
 
 Build project:
   ```shell
@@ -15,7 +22,7 @@ If you want to build without generating typescript models and swagger documentat
   $ ./mvnw clean install -DskipTests
   ```
 
-## Run application
+### Run application
 
 Copy jar file to /docker folder:
 
@@ -23,9 +30,10 @@ Copy jar file to /docker folder:
    $ cp /backend/target/backend-0.0.1-SNAPSHOT.jar /docker
   ```
 
-Build and the container image using the docker command:
+Build and the container images using the docker commands:
  ```shell
   $ ./docker build -t docker-spring-boot-postgres
+  $ ./recommender_service build -t recommendation-service
   ```
 
 Up the docker-compose:
@@ -37,7 +45,10 @@ Up the docker-compose:
 
 ## Work with the application
 
-Go to address in browser: http://localhost:8080/swagger-ui/
+Go to address in browser: 
+
+- http://localhost:8080/api/... — REST API Spring
+- http://localhost:8000/recommendations/... — FastAPI сервис рекомендаций
 
 or
 
